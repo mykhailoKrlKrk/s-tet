@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-services_categories-table
+      author: mykhailoKuryk
+      changes:
+        - createTable:
+            tableName: services_categories
+            columns:
+              - column:
+                  name: service_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: category_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+
+        - addForeignKeyConstraint:
+            baseTableName: services_categories
+            baseColumnNames: service_id
+            referencedTableName: services
+            referencedColumnNames: id
+            constraintName: fk_services_categories_service
+        - addForeignKeyConstraint:
+            baseTableName: services_categories
+            baseColumnNames: category_id
+            referencedTableName: categories
+            referencedColumnNames: id
+            constraintName: fk_services_categories_category
