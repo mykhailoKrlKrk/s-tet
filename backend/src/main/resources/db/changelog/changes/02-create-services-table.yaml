@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
       id: create-masters-table
-      author: mykhailoKrk
+      author: mykhailoKuryk
       changes:
         - createTable:
-            tableName: masters
+            tableName: services
             columns:
               - column:
                   name: id
@@ -19,25 +19,17 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: last_name
-                  type: varchar(255)
+                  name: master_price
+                  type: numeric(10, 2)
                   constraints:
                     nullable: false
               - column:
-                  name: qualification
-                  type: varchar(255)
+                  name: headmaster_price
+                  type: numeric(10, 2)
                   constraints:
                     nullable: false
               - column:
-                  name: cover_image
-                  type: varchar(255)
-              - column:
-                  name: phone_number
-                  type: varchar(255)
-                  constraints:
-                    nullable: false
-              - column:
-                  name: service_id
+                  name: master_id
                   type: bigint
                   constraints:
                     nullable: false
@@ -47,4 +39,11 @@ databaseChangeLog:
                   defaultValueBoolean: false
                   constraints:
                     nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: services
+            baseColumnNames: master_id
+            referencedTableName: masters
+            referencedColumnNames: id
+            constraintName: services_masters_fk
+
 
