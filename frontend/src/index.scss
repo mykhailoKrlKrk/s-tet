@@ -1,0 +1,12 @@
+@import './styles/utils/reset.scss';
+@import './styles/utils/typography.scss';
+@import './styles/utils/variables.scss';
+@import './styles/utils/support.scss';
+
+body {
+  font-family: 'Gotham Pro', sans-serif;
+  font-size: 14px;
+  background-color: $col-background;
+}
+
+
