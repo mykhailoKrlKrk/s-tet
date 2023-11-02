@@ -1,0 +1,19 @@
+.title {
+  font-size: 28px;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    border: 1px solid #000;
+    height: 2px;
+    width: 3000px;
+    position: absolute;
+    bottom: 0;
+  }
+}

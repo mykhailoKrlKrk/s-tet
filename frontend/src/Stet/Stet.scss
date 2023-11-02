@@ -1,0 +1,23 @@
+.stet {
+  position: relative;
+  max-width: 2400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  &__main {
+    flex-grow: 1;
+  }
+
+  &__footer {
+    margin-top: 100px;
+  }
+}

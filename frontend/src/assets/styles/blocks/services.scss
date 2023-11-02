@@ -1,0 +1,133 @@
+@import '../utils/variables.scss';
+
+.services {
+  padding-top: 90px;
+
+  &__container {
+    padding: 0 80px;
+
+    @media (max-width: 580px) {
+      padding: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    margin-left: -35px;
+  }
+
+  &__service-cards {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    @media (max-width: 1000px) {
+      max-width: 500px;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
+  }
+
+  &__service-card {
+    display: block;
+    width: 240px;
+    height: 320px;
+    border: 1px solid #000;
+    transform: skewX(-25deg);
+    position: relative;
+    overflow: hidden;
+    transition: $trans-duration;
+    margin-bottom: 20px;
+
+    @media (max-width: 680px) {
+      width: 180px;
+      height: 260px;
+    }
+
+    @media (max-width: 580px) {
+      transform: skewX(0);
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &--hair::before,
+    &--nails::before,
+    &--makeup::before,
+    &--men::before {
+      content: '';
+      display: block;
+      width: 388px;
+      height: 100%;
+      position: absolute;
+      left: -74px;
+      z-index: -1;
+      top: 0;
+      transform: skewX(25deg);
+      background-size: cover;
+      background-position: center;
+
+      @media (max-width: 580px) {
+        transform: skewX(0);
+      }
+    }
+
+    &--hair::before {
+      /* background-image: url('https://skinkraft.com/cdn/shop/articles/Evidence-Based_db1b4e63-9d14-40c6-baad-32c51be1073b_1024x400.jpg?v=1625565535'); */
+      background-image: url('../../images/services/hair.jpg');
+    }
+
+    &--nails::before {
+      background-image: url('../../images/services/nails.jpg');
+    }
+
+    &--makeup::before {
+      background-image: url('../../images/services/makeup.jpg');
+      background-position-x: -8px;
+    }
+
+    &--men::before {
+      background-image: url('../../images/services/men.jpg');
+    }
+
+    span {
+      color: $col-brown;
+      font-size: 22px;
+      font-weight: 500;
+      padding: 10px 20px;
+
+      display: flex;
+      align-items: center;
+      text-align: center;
+      transform: skewX(25deg);
+      padding: 10px 30px;
+      height: 40px;
+      border-radius: 20px;
+      border: 2px solid $col-brown;
+      background-color: rgba(255, 255, 255, 0.75);
+
+      position: absolute;
+      bottom: 15px;
+      left: 20px;
+
+      @media (max-width: 680px) {
+        font-size: 16px;
+      }
+
+      @media (max-width: 580px) {
+        transform: skewX(0);
+      }
+    }
+
+    &:hover{
+      border: 1px solid #ffffff44;
+      box-shadow: 0 7px 50px 10px #000000aa;
+      filter: brightness(1.15);
+
+      span {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}

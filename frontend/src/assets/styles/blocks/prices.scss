@@ -1,0 +1,28 @@
+.prices {
+  padding-top: 90px;
+  font-size: 18px;
+  font-weight: 500;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    padding: 0 20px;
+
+    &:nth-child(odd) {
+      background-color: #e7dbc8;
+    }
+  }
+
+  &__item-title {
+    flex-grow: 1;
+  }
+
+  &__price {
+    padding-right: 15px;
+  }
+}

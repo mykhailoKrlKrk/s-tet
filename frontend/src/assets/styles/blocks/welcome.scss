@@ -1,0 +1,182 @@
+.welcome {
+  height: 900px;
+  display: grid;
+  position: relative;
+
+  &__banner {
+    background-size: cover;
+
+    &--home {
+      background-position: left;
+      background-image: url('../../images/banners/Home+page+main+pic.jpg');
+    }
+
+    &--hair {
+      background-position: left;
+      background-image: url('../../images/banners/banner__hair.jpg');
+    }
+
+    @media (max-width: 820px) {
+      // background-position: left;
+    }
+  }
+
+  &__left {
+    width: 25%;
+    left: 0;
+  }
+
+  &__right {
+    width: 40%;
+    right: 0;
+  }
+
+  &__left,
+  &__right {
+    text-align: center;
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    height: 100%;
+    background-color: $col-background;
+
+    @media (max-width: 1240px) {
+      width: 35%;
+    }
+
+    @media (max-width: 820px) {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__title {
+    padding-top: 200px;
+    font-family: LilyScriptOne;
+    font-size: 120px;
+    text-shadow: 2px 2px 4px #CE5937;
+    margin-bottom: 60px;
+
+    @media (max-width: 940px) {
+      font-size: 86px;
+    }
+
+    @media (max-width: 820px) {
+      font-size: 120px;
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: LilyScriptOne;
+    font-size: 24px;
+    text-align: center;
+    line-height: 130%;
+    letter-spacing: 1.5px;
+    margin-bottom: 110px;
+
+    @media (max-width: 940px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 820px) {
+      font-size: 24px;
+    }
+  }
+
+  &__booking {
+    border: none;
+    padding: 20px 40px;
+    font-size: 36px;
+    position: relative;
+    background: transparent;
+    color: #000;
+    text-transform: uppercase;
+    border: 3px solid #000;
+    cursor: pointer;
+    transition: all 0.7s;
+    overflow: hidden;
+    border-radius: 100px;
+
+    &:hover {
+      color: #fff;
+    }
+
+    span {
+      transition: all 0.7s;
+      z-index: -1;
+    }
+
+    .first {
+      content: "";
+      position: absolute;
+      right: 100%;
+      top: 0;
+      width: 25%;
+      height: 100%;
+      background: #000;
+    }
+
+    &:hover .first {
+      top: 0;
+      right: 0;
+    }
+
+    .second {
+      content: "";
+      position: absolute;
+      left: 25%;
+      top: -100%;
+      height: 100%;
+      width: 25%;
+      background: #000;
+    }
+
+    &:hover .second {
+      top: 0;
+      left: 50%;
+    }
+
+    .third {
+      content: "";
+      position: absolute;
+      left: 50%;
+      height: 100%;
+      top: 100%;
+      width: 33%;
+      background: #000;
+    }
+
+    &:hover .third {
+      top: 0;
+      left: 25%;
+    }
+
+    .fourth {
+      content: "";
+      position: absolute;
+      left: 100%;
+      top: 0;
+      height: 100%;
+      width: 25%;
+      background: #000;
+    }
+
+    &:hover .fourth {
+      top: 0;
+      left: 0;
+    }
+
+    @media (max-width: 1620px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 820px) {
+      font-size: 36px;
+    }
+  }
+}

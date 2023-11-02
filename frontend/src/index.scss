@@ -1,7 +1,19 @@
-@import './styles/utils/reset.scss';
-@import './styles/utils/typography.scss';
-@import './styles/utils/variables.scss';
-@import './styles/utils/support.scss';
+@import './assets/styles/utils/reset.scss';
+@import './assets/styles/utils/typography.scss';
+@import './assets/styles/utils/variables.scss';
+@import './assets/styles/utils/support.scss';
+
+@import './assets/styles/blocks/welcome.scss';
+@import './assets/styles/blocks/works.scss';
+@import './assets/styles/blocks/masters.scss';
+@import './assets/styles/blocks/prices.scss';
+
+@import './assets/styles/blocks/title.scss';
+@import './assets/styles/blocks/logo.scss';
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Gotham Pro', sans-serif;

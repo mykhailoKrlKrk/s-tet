@@ -1,0 +1,50 @@
+.footer {
+  background-color: #422800;
+  color: #fff;
+
+
+  &__container {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  &__navbar-list {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+
+  &__socials {
+    display: flex;
+  }
+
+  &__social-link {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    margin-right: 25px;
+    background-size: contain;
+
+    &--fb {
+      background-image: url('../../assets/images/icons/fb-icon.svg');
+    }
+
+    &--inst {
+      background-image: url('../../assets/images/icons/inst-icon.svg');
+    }
+
+    &--tg {
+      background-image: url('../../assets/images/icons/telegram.svg');
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    padding: 20px;
+  }
+}
