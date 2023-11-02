@@ -7,3 +7,5 @@ databaseChangeLog:
       file: db/changelog/changes/04-create-categories-table.yaml
   - include:
       file: db/changelog/changes/05-create-services_categories-table.yaml
+  - include:
+      file: db/changelog/changes/06-create-comments-table.yaml
