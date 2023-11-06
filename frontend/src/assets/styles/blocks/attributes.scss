@@ -17,18 +17,45 @@
   }
 
   &__card {
-    border: 1px solid black;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 20px;
+    width: 100%;
+    height: 320px;
+    perspective: 1000px;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+
+  &__card-inner {
     position: relative;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+    &--rotated {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &__card-front, &__card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+  }
+
+  &__card-front {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+    background-color: #ffffff;
+    padding: 20px;
   }
 
   &__img-container {
     width: 100%;
-    height: 180px;
-    margin-bottom: 30px;
+    height: 220px;
+    margin-bottom: 20px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     overflow: hidden;
@@ -43,8 +70,20 @@
 
   &__card-title {
     font-size: 22px;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 32px;
+      background: center / contain no-repeat url('../../images/icons/click.svg');
+    }
 
     @media (max-width: 600px) {
       font-size: 18px;
@@ -58,22 +97,13 @@
     background-color: #fff;
   }
 
-  &__card-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 0;
-    width: 100%;
-    background-color: #422800;
+  &__card-back {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+    background-color: $col-brown;
+    transform: rotateY(180deg);
+    padding: 20px;
     color: #fff;
     font-size: 16px;
-    line-height: 150%;
-    overflow: hidden;
-
-    &--active {
-      height: 100%;
-      padding: 30px;
-    }
-    
+    line-height: 130%;
   }
 }
