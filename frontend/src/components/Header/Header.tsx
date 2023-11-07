@@ -1,12 +1,48 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import classNames from 'classnames';
 import { goTop } from '../../working-files/functions/goTop';
 
 import './Header.scss';
+import DropdownMenu from '../DropdownMenu/DropdownMenu';
 
 export default function Header() {
+  const [isMenu, setMenu] = useState(false);
+  const location = useLocation();
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+  const handleMouseEnter = () => {
+    setDropdownVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdownVisible(false);
+  };
+
+  const handleMenuClick = () => {
+    setMenu(!isMenu);
+
+    isMenu
+      ? (document.body.style.overflow = 'auto')
+      : (document.body.style.overflow = 'hidden');
+  };
+
+  useEffect(() => {
+    if (isMenu) {
+      handleMenuClick();
+    }
+
+    if (isDropdownVisible) {
+      setDropdownVisible(false);
+    }
+  }, [location.hash, location.pathname]);
+
   return (
-    <header className="stet__header header">
+    <header
+      className={classNames('stet__header', 'header', {
+        'header--isMenu': isMenu,
+      })}
+    >
       <div className="header__container _container">
         <Link to="/" className="logo" onClick={goTop}>
           <img
@@ -24,9 +60,21 @@ export default function Header() {
               </Link>
             </li>
             <li className="header__navbar-item">
-              <a href="#services" className="header__navbar-link">
+              <a
+                href="#services"
+                className="header__navbar-link header__navbar-link--services"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                onClick={handleMouseLeave}
+              >
                 Services
               </a>
+              {isDropdownVisible && (
+                <DropdownMenu
+                  handleMouseEnter={handleMouseEnter}
+                  handleMouseLeave={handleMouseLeave}
+                />
+              )}
             </li>
             <li className="header__navbar-item">
               <a href="#benefits" className="header__navbar-link">
@@ -42,11 +90,53 @@ export default function Header() {
         </nav>
 
         <div className="header__actions">
-          <button className="header__menu-button">Menu</button>
           <Link to="booking" className="header__booking-button">
             Book
           </Link>
+          <button className="header__menu-button" onClick={handleMenuClick}>
+            {isMenu ? 'Close' : 'Menu'}
+          </button>
         </div>
+
+        <nav className="header__topmenu">
+          <ul className="header__topmenu-list">
+            <li className="header__topmenu-item">
+              <p className="header__topmenu-link">Services</p>
+              <ul className="header__topmenu-sublist">
+                <li className="header__topmenu-sublink">
+                  <Link to="hair" className="header__topmenu-link">
+                    Hair
+                  </Link>
+                </li>
+                <li className="header__topmenu-sublink">
+                  <Link to="nails" className="header__topmenu-link">
+                    Nails
+                  </Link>
+                </li>
+                <li className="header__topmenu-sublink">
+                  <Link to="makeup" className="header__topmenu-link">
+                    Make up
+                  </Link>
+                </li>
+                <li className="header__topmenu-sublink">
+                  <Link to="men" className="header__topmenu-link">
+                    Men
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="header__topmenu-item">
+              <a href="#benefits" className="header__topmenu-link">
+                About
+              </a>
+            </li>
+            <li className="header__topmenu-item">
+              <a href="#contacts" className="header__topmenu-link">
+                Contacts
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   );

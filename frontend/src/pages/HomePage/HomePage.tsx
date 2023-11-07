@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { goTop } from '../../working-files/functions/goTop';
 
 import './HomePage.scss';
 
@@ -99,13 +98,13 @@ export default function HomePage() {
           <p className="welcome__subtitle">
             World of beauty, pleasure, and transformation.
           </p>
-          <button className="welcome__booking">
+          <Link to="booking" className="welcome__booking">
             Book now
             <span className="first"></span>
             <span className="second"></span>
             <span className="third"></span>
             <span className="fourth"></span>
-          </button>
+          </Link>
         </div>
         <div className="welcome__banner">
           {banners.map((banner) => (
@@ -129,28 +128,24 @@ export default function HomePage() {
             <Link
               to="hair"
               className="services__service-card services__service-card--hair"
-              onClick={goTop}
             >
               <span>Hair</span>
             </Link>
             <Link
               to="nails"
               className="services__service-card services__service-card--nails"
-              onClick={goTop}
             >
               <span>Nails</span>
             </Link>
             <Link
               to="makeup"
               className="services__service-card services__service-card--makeup"
-              onClick={goTop}
             >
               <span>Make up</span>
             </Link>
             <Link
               to="men"
               className="services__service-card services__service-card--men"
-              onClick={goTop}
             >
               <span>Men</span>
             </Link>

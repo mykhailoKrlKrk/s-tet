@@ -1,4 +1,5 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 
 import Header from '../components/Header/Header';
 
@@ -12,9 +13,15 @@ import NotFoundPage from '../pages/NotFoundPage/NotFoundPage';
 
 import Footer from '../components/Footer/Footer';
 import './Stet.scss';
-// import { useState } from 'react';
+import { goTop } from '../working-files/functions/goTop';
 
 function Stet() {
+  const location = useLocation();
+
+  useEffect(() => {
+    goTop();
+  }, [location.pathname]);
+
   return (
     <div className="stet">
       <Header />

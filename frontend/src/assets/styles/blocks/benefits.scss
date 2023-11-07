@@ -20,6 +20,10 @@
     min-width: 100%;
     background-color: $col-background;
     transition: left 1s;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
   }
 
   &__img-container {

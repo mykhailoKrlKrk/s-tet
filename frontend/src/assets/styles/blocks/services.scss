@@ -59,18 +59,15 @@
     }
 
     &--hair::before {
-      /* background-image: url('https://skinkraft.com/cdn/shop/articles/Evidence-Based_db1b4e63-9d14-40c6-baad-32c51be1073b_1024x400.jpg?v=1625565535'); */
       background-image: url('../../images/services/hair.jpg');
     }
 
     &--nails::before {
-      // background-image: url('../../images/services/nails.jpg');
-      background-image: url('../../images/services/hair.jpg');
+      background-image: url('../../images/services/nails.jpg');
     }
 
     &--makeup::before {
-      // background-image: url('../../images/services/makeup.jpg');
-      background-image: url('../../images/services/hair.jpg');
+      background-image: url('../../images/services/makeup.jpg');
     }
 
     &--men::before {
@@ -83,18 +80,15 @@
       font-weight: 500;
       padding: 10px 20px;
 
-      display: flex;
-      align-items: center;
       text-align: center;
       padding: 10px 30px;
       height: 40px;
-      border-radius: 20px;
-      border: 2px solid $col-brown;
       background-color: rgba(255, 255, 255, 0.75);
 
       position: absolute;
-      bottom: 15px;
-      left: 20px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
 
       @media (max-width: 680px) {
         font-size: 16px;

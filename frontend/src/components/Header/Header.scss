@@ -10,12 +10,24 @@
   box-shadow: 0px -11px 17px 0px #000;
   background-color: rgb(255 255 255 / 0.3);
   backdrop-filter: blur(10px);
+  position: relative;
+  transition: $trans-duration;
+
+  @media (max-width: 580px) {
+    overflow: hidden;
+  }
+  
+
+  &--isMenu {
+    height: 100vh;
+  }
 
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100%;
+    height: 80px;
+    overflow: visible;
   }
 
   &__navbar {
@@ -46,8 +58,9 @@
 
   &__navbar-item {
     height: 100%;
+    position: relative;
     &:not(:last-child) {
-      padding-right: 20px;
+      margin-right: 20px;
     }
 
     @media (max-width: 710px) {
@@ -65,6 +78,17 @@
 
     &:hover {
       background-color: rgba(58, 33, 2, 0.3);
+    }
+
+    &--services {
+      &::after {
+        content: '  ';
+        display: block;
+        transform: rotate(-90deg);
+        width: 30px;
+        height: 14px;
+        background: center / contain no-repeat url('../../assets/images/icons/arrow.svg');
+      }
     }
   }
 
@@ -97,12 +121,43 @@
     }
   }
 
+  &__booking-button {
+    @media (max-width: 580px) {
+      display: none;
+    }
+  }
+
   &__menu-button {
-    margin-right: 20px;
+    display: none;
+
+    @media (max-width: 580px) {
+      display: block;
+    }
+  }
+
+  &__topmenu {
     display: none;
 
     @media (max-width: 580px) {
       display: initial;
+      position: absolute;
+      top: 100px;
     }
+  }
+
+  &__topmenu-item {
+    margin-bottom: 10px;
+  }
+
+  &__topmenu-list {
+    font-size: 24px;
+    line-height: 200%;
+    font-weight: 700;
+    color: $col-brown;
+  }
+
+  &__topmenu-sublink {
+    margin-left: 40px;
+    list-style:circle;
   }
 }
