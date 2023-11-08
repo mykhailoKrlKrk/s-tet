@@ -5,36 +5,38 @@
     margin-bottom: 40px;
   }
 
-  &__contents-container {
-    position: relative;
-    overflow: hidden;
-    height: 600px;
-  }
-
   &__content {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    display: flex;
+    display: grid;
     margin-bottom: 40px;
-    min-width: 100%;
-    background-color: $col-background;
-    transition: left 1s;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    position: relative;
 
-    &:nth-child(even) {
-      flex-direction: row-reverse;
+    @media (max-width: 860px) {
+      grid-template-columns: 2fr 3fr;
+    }
+
+    @media (max-width: 640px) {
+      display: block;
+      height: 350px;
+      padding: 10px 20px;
+    }
+
+    @media (max-width: 480px) {
+      height: 440px;
     }
   }
 
   &__img-container {
-    min-width: 50%;
-    height: 600px;
+    width: 100%;
+    height: 300px;
 
-    @media (max-width: 720px) {
-      height: 600px;
+    @media (max-width: 640px) {
       position: absolute;
       left: 0;
       top: 0;
+      z-index: -1;
+      height: 100%;
     }
   }
 
@@ -43,25 +45,19 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-  }
 
-  &__info {
-    margin-left: 40px;
-    margin-bottom: 20px;
-
-    @media (max-width: 720px) {
-      margin-left: 0;
-      padding: 20px;
-      position: relative;
-      z-index: 2;
-      background-color: rgba(255, 255, 255, 0.6);
-      height: 600px;
+    @media (max-width: 640px) {
+      opacity: 0.5;
     }
   }
 
   &__benefit-title {
     font-size: 24px;
     margin-bottom: 32px;
+
+    @media (max-width: 720px) {
+      margin-bottom: 16px;
+    }
   }
 
   &__benefit-text {
@@ -69,28 +65,11 @@
     line-height: 150%;
 
     @media (max-width: 720px) {
-      height: 300px;
-      font-weight: 500;
+      font-size: 16px;
     }
-  }
 
-  &__buttons {
-    width: 60px;
-    margin: 40px auto 0;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__button {
-    display: block;
-    width: 14px;
-    height: 14px;
-    background-color: #fff;
-    border: 2px solid $col-brown;
-    border-radius: 50%;
-
-    &--active {
-      background-color: $col-brown;
+    @media (max-width: 640px) {
+      font-weight: 500;
     }
   }
 }

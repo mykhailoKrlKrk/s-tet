@@ -53,27 +53,19 @@ const attributes = [
   {
     id: 3,
     title: 'Individuality',
-    img: './img/attributes/individuality.png',
+    img: './img/attributes/individuality.jpg',
     text: 'Our objective extends beyond mere service. We strive to offer tailored guidance, taking into consideration your individual characteristics and style preferences. You can place full confidence in our specialists for any transformative change you desire.',
   },
 ];
 
 export default function HomePage() {
   const [bannerIdx, setBannerIdx] = useState(0);
-  const [benefitIdx, setBenefitIdx] = useState(0);
-  const [initPos, setInitPos] = useState(100);
   const [attributeId, setAttributeId] = useState<number | null>(null);
 
   const changeBanner = () => {
     bannerIdx === banners.length - 1
       ? setBannerIdx(0)
       : setBannerIdx(bannerIdx + 1);
-  };
-
-  const changeBenefit = (id: number) => {
-    setBenefitIdx(id);
-    setInitPos(0);
-    setTimeout(() => setInitPos(100), 1000);
   };
 
   const showAttribute = (id: number) => {
@@ -158,14 +150,7 @@ export default function HomePage() {
           <h2 className="benefits__title title">Feel our benefits</h2>
           <div className="benefits__contents-container">
             {benefits.map((benefit) => (
-              <div
-                key={benefit.id}
-                className="benefits__content"
-                style={{
-                  left: `${benefitIdx === benefit.id ? 0 : initPos}%`,
-                  zIndex: `${benefitIdx === benefits.indexOf(benefit) ? 5 : 0}`,
-                }}
-              >
+              <div key={benefit.id} className="benefits__content">
                 <div className="benefits__img-container">
                   <img src={benefit.img} alt="" className="benefits__img" />
                 </div>
@@ -174,17 +159,6 @@ export default function HomePage() {
                   <p className="benefits__benefit-text">{benefit.text}</p>
                 </div>
               </div>
-            ))}
-          </div>
-          <div className="benefits__buttons">
-            {benefits.map((benefit) => (
-              <button
-                key={benefit.id}
-                className={classNames('benefits__button', {
-                  'benefits__button--active': benefit.id === benefitIdx,
-                })}
-                onClick={() => changeBenefit(benefit.id)}
-              />
             ))}
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import classNames from 'classnames';
 import { goTop } from '../../working-files/functions/goTop';
 
@@ -53,40 +54,78 @@ export default function Header() {
         </Link>
 
         <nav className="header__navbar">
-          <ul className="header__navbar-list">
-            <li className="header__navbar-item">
-              <Link to="/home" className="header__navbar-link" onClick={goTop}>
-                Home
-              </Link>
-            </li>
-            <li className="header__navbar-item">
-              <a
-                href="#services"
-                className="header__navbar-link header__navbar-link--services"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                onClick={handleMouseLeave}
-              >
-                Services
-              </a>
-              {isDropdownVisible && (
-                <DropdownMenu
-                  handleMouseEnter={handleMouseEnter}
-                  handleMouseLeave={handleMouseLeave}
-                />
-              )}
-            </li>
-            <li className="header__navbar-item">
-              <a href="#benefits" className="header__navbar-link">
-                About
-              </a>
-            </li>
-            <li className="header__navbar-item">
-              <a href="#contacts" className="header__navbar-link">
-                Contacts
-              </a>
-            </li>
-          </ul>
+          {location.pathname === '/' ? (
+            <ul className="header__navbar-list">
+              <li className="header__navbar-item">
+                <Link
+                  to="/home"
+                  className="header__navbar-link"
+                  onClick={goTop}
+                >
+                  Home
+                </Link>
+              </li>
+              <li className="header__navbar-item">
+                <HashLink
+                  to="#services"
+                  className="header__navbar-link header__navbar-link--services"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  onClick={handleMouseLeave}
+                >
+                  Services
+                </HashLink>
+                {isDropdownVisible && (
+                  <DropdownMenu
+                    handleMouseEnter={handleMouseEnter}
+                    handleMouseLeave={handleMouseLeave}
+                  />
+                )}
+              </li>
+              <li className="header__navbar-item">
+                <HashLink to="#benefits" className="header__navbar-link">
+                  About
+                </HashLink>
+              </li>
+              <li className="header__navbar-item">
+                <HashLink to="#contacts" className="header__navbar-link">
+                  Contacts
+                </HashLink>
+              </li>
+            </ul>
+          ) : (
+            <ul className="header__navbar-list">
+              <li className="header__navbar-item">
+                <Link
+                  to="/home"
+                  className="header__navbar-link"
+                  onClick={goTop}
+                >
+                  Home
+                </Link>
+              </li>
+              <li className="header__navbar-item">
+                <Link to="/hair" className="header__navbar-link">
+                  Hair
+                </Link>
+              </li>
+              <li className="header__navbar-item">
+                <Link to="/nails" className="header__navbar-link">
+                  Nails
+                </Link>
+              </li>
+              <li className="header__navbar-item">
+                <Link to="/makeup" className="header__navbar-link">
+                  Make up
+                </Link>
+              </li>
+              <li className="header__navbar-item">
+                <Link to="/men" className="header__navbar-link">
+                  Men
+                </Link>
+              </li>
+            </ul>
+          )}
         </nav>
 
         <div className="header__actions">
