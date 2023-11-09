@@ -4,7 +4,13 @@ export default function HairPage() {
   return (
     <div className="stet__service-page service-page">
       <section className="service-page__welcome welcome">
-        <div className="welcome__banner welcome__banner--hair"></div>
+        <div className="welcome__banner">
+          <img
+            src="./img/banners/banner__hair-2.jpg"
+            className="welcome__banner-img"
+            alt="Beauty"
+          />
+        </div>
         <div className="welcome__right">
           <h1 className="welcome__title">Hair</h1>
           <p className="welcome__subtitle">
