@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-@Tag(name = "Masters orders", description = "Endpoints for orders")
+@Tag(name = "Manage orders", description = "Endpoints for orders")
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(value = "/orders")
