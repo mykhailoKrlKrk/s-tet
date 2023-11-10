@@ -7,8 +7,10 @@ import com.example.backend.dto.order.OrderResponseDto;
 import com.example.backend.service.OrderService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import java.math.BigDecimal;
 import lombok.RequiredArgsConstructor;
+import lombok.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,7 +32,7 @@ public class OrderController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Create order", description = "Create new order in the DB")
-    public OrderResponseDto createOrder(@RequestBody OrderRequestDto requestDto) {
+    public OrderResponseDto createOrder(@RequestBody @Valid OrderRequestDto requestDto) {
         return orderService.createOrder(requestDto);
     }
 
