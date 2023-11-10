@@ -58,9 +58,9 @@ public class MasterServiceImpl implements MasterService {
     }
 
     @Override
-    public MasterDto findById(Long id) {
-        return masterMapper.toDto(masterRepository.findById(id).orElseThrow(
-                 () -> new EntityNotFoundException("Can't find master by id: " + id)));
+    public Master findById(Long id) {
+        return masterRepository.findById(id).orElseThrow(
+                 () -> new EntityNotFoundException("Can't find master by id: " + id));
     }
 
     @Override

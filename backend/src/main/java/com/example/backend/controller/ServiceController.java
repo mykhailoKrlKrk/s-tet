@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "Services management", description = "Endpoints for services")
 @RestController
 @RequiredArgsConstructor
-@RequestMapping(value = "/services")
+@RequestMapping(value = "/subservices")
 public class ServiceController {
     private final ServicesService servicesService;
 

@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "Categories  management", description = "Endpoints for categories")
 @RestController
 @RequiredArgsConstructor
-@RequestMapping(value = "/categories")
+@RequestMapping(value = "/services")
 public class CategoryController {
     private final CategoryService categoryService;
 
