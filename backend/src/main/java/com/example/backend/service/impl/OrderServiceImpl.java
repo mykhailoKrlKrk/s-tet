@@ -29,7 +29,6 @@ public class OrderServiceImpl implements OrderService {
     private final OrderRepository orderRepository;
     private final OrderMapper orderMapper;
 
-
     @Override
     public OrderResponseDto createOrder(OrderRequestDto requestDto) {
         Order order = orderMapper.toModel(requestDto);
@@ -39,9 +38,9 @@ public class OrderServiceImpl implements OrderService {
         order.setMaster(masterService.findById(requestDto.getMasterId()));
         Set<com.example.backend.model.Service> services =
                 requestDto.getServicesId().stream()
-                .map(servicesService::findById)
-                .map(serviceMapper::toModel)
-                .collect(Collectors.toSet());
+                        .map(servicesService::findById)
+                        .map(serviceMapper::toModel)
+                        .collect(Collectors.toSet());
         order.setServices(services);
         return orderMapper.toDto(orderRepository.save(order));
     }

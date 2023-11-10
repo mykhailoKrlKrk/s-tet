@@ -1,11 +1,11 @@
 package com.example.backend.dto.order;
 
 import com.example.backend.validation.PhoneNumber;
+import jakarta.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.util.List;
 import lombok.Data;
 import lombok.experimental.Accessors;
-import jakarta.validation.constraints.NotNull;
 
 @Data
 @Accessors(chain = true)

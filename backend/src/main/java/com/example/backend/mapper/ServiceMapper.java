@@ -14,5 +14,6 @@ public interface ServiceMapper {
     ServiceDto toDto(Service service);
 
     Service toModel(ServiceDto serviceDto);
+
     Service toModel(ServiceRequestDto requestDto);
 }
