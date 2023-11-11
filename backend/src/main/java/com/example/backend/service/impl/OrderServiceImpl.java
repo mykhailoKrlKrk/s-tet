@@ -1,10 +1,7 @@
 package com.example.backend.service.impl;
 
-import com.example.backend.dto.master.MasterDto;
-import com.example.backend.dto.order.GetOrderSumRequestDto;
 import com.example.backend.dto.order.OrderRequestDto;
 import com.example.backend.dto.order.OrderResponseDto;
-import com.example.backend.dto.service.ServiceDto;
 import com.example.backend.mapper.OrderMapper;
 import com.example.backend.mapper.ServiceMapper;
 import com.example.backend.model.Order;
@@ -12,9 +9,7 @@ import com.example.backend.repository.OrderRepository;
 import com.example.backend.service.MasterService;
 import com.example.backend.service.OrderService;
 import com.example.backend.service.ServicesService;
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
@@ -36,6 +31,7 @@ public class OrderServiceImpl implements OrderService {
         order.setOrderDate(LocalDateTime.now());
         order.setOrderTotal(requestDto.getOrderTotal());
         order.setMaster(masterService.findById(requestDto.getMasterId()));
+        order.setComment(requestDto.getComment());
         Set<com.example.backend.model.Service> services =
                 requestDto.getServicesId().stream()
                         .map(servicesService::findById)
@@ -49,27 +45,4 @@ public class OrderServiceImpl implements OrderService {
     public void delete(Long id) {
         orderRepository.deleteById(id);
     }
-
-    @Override
-    public BigDecimal getTotal(GetOrderSumRequestDto requestDto) {
-        MasterDto master = masterService.getById(requestDto.getMasterId());
-        List<Long> servicesId = requestDto.getServicesId();
-
-        BigDecimal totalPrice = new BigDecimal(0);
-        if (master.getQualification().equals("headMaster")) {
-            for (Long id : servicesId) {
-                ServiceDto byId = servicesService.findById(id);
-                BigDecimal headMasterPrice = byId.getHeadMasterPrice();
-                totalPrice = totalPrice.add(headMasterPrice);
-            }
-        } else {
-            for (Long id : servicesId) {
-                ServiceDto byId = servicesService.findById(id);
-                BigDecimal masterPrice = byId.getMasterPrice();
-                totalPrice = totalPrice.add(masterPrice);
-            }
-        }
-        return totalPrice;
-    }
-
 }

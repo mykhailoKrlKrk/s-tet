@@ -1,13 +1,11 @@
 package com.example.backend.controller;
 
-import com.example.backend.dto.order.GetOrderSumRequestDto;
 import com.example.backend.dto.order.OrderRequestDto;
 import com.example.backend.dto.order.OrderResponseDto;
 import com.example.backend.service.OrderService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
-import java.math.BigDecimal;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -24,14 +22,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/orders")
 public class OrderController {
     private final OrderService orderService;
-
-    @PostMapping("/sum")
-    @Operation(summary = "Get services price",
-            description = "Get total price based on selected services")
-    @ResponseStatus(HttpStatus.OK)
-    public BigDecimal calculateSum(@RequestBody GetOrderSumRequestDto requestDto) {
-        return orderService.getTotal(requestDto);
-    }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)

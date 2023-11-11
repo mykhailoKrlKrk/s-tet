@@ -12,4 +12,5 @@ public class OrderResponseDto {
     private String clientName;
     private BigDecimal orderTotal;
     private LocalDateTime orderDate;
+    private String comment;
 }

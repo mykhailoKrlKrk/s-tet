@@ -21,4 +21,6 @@ public class OrderRequestDto {
     private Long masterId;
     @NotNull
     private List<Long> servicesId;
+    @NotNull
+    private String comment;
 }

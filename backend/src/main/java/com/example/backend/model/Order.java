@@ -42,6 +42,9 @@ public class Order {
     @Column(name = "order_date", nullable = false)
     private LocalDateTime orderDate;
 
+    @Column(name = "comment", nullable = false)
+    private String comment;
+
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "master_id")
     private Master master;
