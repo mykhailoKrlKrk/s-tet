@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-orders_services-table
+      author: mykhailoKuryk
+      changes:
+        - createTable:
+            tableName: orders_services
+            columns:
+              - column:
+                  name: order_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: service_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+
+        - addForeignKeyConstraint:
+            baseTableName: orders_services
+            baseColumnNames: order_id
+            referencedTableName: orders
+            referencedColumnNames: id
+            constraintName: fk_orders_services
+        - addForeignKeyConstraint:
+            baseTableName: orders_services
+            baseColumnNames: service_id
+            referencedTableName: services
+            referencedColumnNames: id
+            constraintName: fk_services_orders

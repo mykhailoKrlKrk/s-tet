@@ -1,0 +1,47 @@
+version: "3.8"
+
+services:
+  mysqldbapp:
+    container_name: mysql-stet
+    platform: linux/arm64
+    image: mysql:latest
+    restart: unless-stopped
+    env_file: ./.env
+    environment:
+      - MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQL_DATABASE
+      - MYSQL_USER=$MYSQL_USER
+      - MYSQL_PASSWORD=$MYSQL_PASSWORD
+    ports:
+      - "$MYSQL_LOCAL_PORT:$MYSQL_DOCKER_PORT"
+    healthcheck:
+      test: [ "CMD-SHELL", "mysqladmin ping -u root -p$MYSQL_ROOT_PASSWORD" ]
+      interval: 30s
+      timeout: 30s
+      retries: 3
+    networks:
+      - s-tet-db
+
+  app:
+    container_name: s-tet
+    depends_on:
+      - mysqldbapp
+    restart: on-failure
+    image: s-tet-app
+    build: .
+    env_file: ./.env
+    ports:
+      - "$SPRING_LOCAL_PORT:$SPRING_DOCKER_PORT"
+      - "$DEBUG_PORT:$DEBUG_PORT"
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:mysql://mysql-stet:$MYSQL_DOCKER_PORT/$MYSQL_DATABASE?serverTimezone=UTC"
+      SPRING_DATASOURCE_USERNAME: "$MYSQL_USER"
+      SPRING_DATASOURCE_PASSWORD: "$MYSQL_PASSWORD"
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: "org.hibernate.dialect.MySQLDialect"
+      JAVA_TOOL_OPTIONS: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:$DEBUG_PORT"
+    networks:
+      - s-tet-db
+
+networks:
+  s-tet-db:
+    driver: bridge

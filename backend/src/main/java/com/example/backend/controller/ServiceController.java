@@ -19,10 +19,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-@Tag(name = "Services management", description = "Endpoints for services")
+@Tag(name = "Subservices management", description = "Endpoints for subservices")
 @RestController
 @RequiredArgsConstructor
-@RequestMapping(value = "/services")
+@RequestMapping(value = "/subservices")
 public class ServiceController {
     private final ServicesService servicesService;
 

@@ -40,6 +40,9 @@ public class Service {
     @ManyToOne
     private Master master;
 
+    @ManyToMany(mappedBy = "services")
+    private Set<Order> order;
+
     @ManyToMany
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
