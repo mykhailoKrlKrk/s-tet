@@ -18,4 +18,7 @@ public class ServiceRequestDto {
     @NotNull
     @Min(0)
     private BigDecimal headMasterPrice;
+
+    @NotNull
+    private Long categoryId;
 }

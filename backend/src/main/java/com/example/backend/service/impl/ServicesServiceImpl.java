@@ -4,8 +4,10 @@ import com.example.backend.dto.service.ServiceDto;
 import com.example.backend.dto.service.ServiceRequestDto;
 import com.example.backend.exception.EntityNotFoundException;
 import com.example.backend.mapper.ServiceMapper;
+import com.example.backend.model.Category;
 import com.example.backend.model.Service;
 import com.example.backend.repository.ServiceRepository;
+import com.example.backend.service.CategoryService;
 import com.example.backend.service.ServicesService;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -17,6 +19,7 @@ import org.springframework.stereotype.Component;
 public class ServicesServiceImpl implements ServicesService {
     private final ServiceRepository serviceRepository;
     private final ServiceMapper serviceMapper;
+    private final CategoryService categoryService;
 
     @Override
     public List<ServiceDto> getServicesByCategory(String category) {
@@ -27,8 +30,10 @@ public class ServicesServiceImpl implements ServicesService {
 
     @Override
     public ServiceDto save(ServiceRequestDto requestDto) {
-        Service book = serviceMapper.toModel(requestDto);
-        return serviceMapper.toDto(serviceRepository.save(book));
+        Service service = serviceMapper.toModel(requestDto);
+        Category category = categoryService.findById(requestDto.getCategoryId());
+        service.getCategories().add(category);
+        return serviceMapper.toDto(serviceRepository.save(service));
     }
 
     @Override
@@ -51,3 +56,4 @@ public class ServicesServiceImpl implements ServicesService {
         serviceRepository.deleteById(id);
     }
 }
+

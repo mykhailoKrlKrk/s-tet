@@ -35,13 +35,6 @@ public class MasterServiceImpl implements MasterService {
     }
 
     @Override
-    public List<MasterDto> getMastersByService(String service) {
-        return masterRepository.getMastersByService(service).stream()
-                .map(masterMapper::toDto)
-                .toList();
-    }
-
-    @Override
     public List<MasterDto> getMastersByCategory(String category) {
         return masterRepository.getMastersByCategory(category).stream()
                 .map(masterMapper::toDto)
@@ -53,7 +46,7 @@ public class MasterServiceImpl implements MasterService {
         Master model = masterMapper.toModel(requestDto);
         Service service = new Service();
         service.setId(requestDto.getServiceId());
-        model.setService(service);
+        model.getServices().add(service);
         return masterMapper.toDto(masterRepository.save(model));
     }
 

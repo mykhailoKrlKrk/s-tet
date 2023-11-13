@@ -11,8 +11,6 @@ public interface MasterService {
 
     MasterDto getById(Long id);
 
-    List<MasterDto> getMastersByService(String service);
-
     List<MasterDto> getMastersByCategory(String category);
 
     MasterDto createMaster(MasterRequestDto requestDto);

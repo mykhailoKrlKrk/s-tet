@@ -8,9 +8,7 @@ import org.springframework.data.repository.query.Param;
 
 public interface MasterRepository extends JpaRepository<Master, Long> {
 
-    @Query("SELECT m FROM Master m WHERE m.service.name = :service")
-    List<Master> getMastersByService(@Param("service") String service);
-
-    @Query("SELECT m FROM Master m JOIN m.service s JOIN s.categories c WHERE c.name = :category")
+    @Query("SELECT DISTINCT m FROM Master m JOIN m.services s "
+            + "JOIN s.categories c WHERE c.name = :category AND m.isDeleted = false")
     List<Master> getMastersByCategory(@Param("category") String category);
 }

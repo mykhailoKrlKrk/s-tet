@@ -41,13 +41,6 @@ public class MasterController {
         return masterService.getMastersByCategory(category);
     }
 
-    @GetMapping("services/{service}")
-    @Operation(summary = "Get masters by service",
-            description = "Get list of masters that support specific service")
-    public List<MasterDto> getMastersByService(@PathVariable String service) {
-        return masterService.getMastersByService(service);
-    }
-
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Create master", description = "Create new master in the DB")

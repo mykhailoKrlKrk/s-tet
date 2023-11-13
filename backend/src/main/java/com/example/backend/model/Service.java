@@ -8,10 +8,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Min;
 import java.math.BigDecimal;
+import java.util.HashSet;
 import java.util.Set;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -37,11 +37,12 @@ public class Service {
     @Min(0)
     @Column(name = "headmaster_price", nullable = false)
     private BigDecimal headMasterPrice;
-    @ManyToOne
-    private Master master;
 
     @ManyToMany(mappedBy = "services")
-    private Set<Order> order;
+    private Set<Master> masters;
+
+    @ManyToMany(mappedBy = "services")
+    private Set<Order> orders;
 
     @ManyToMany
     @ToString.Exclude
@@ -49,9 +50,14 @@ public class Service {
     @JoinTable(name = "services_categories",
             joinColumns = @JoinColumn(name = "service_id"),
             inverseJoinColumns = @JoinColumn(name = "category_id"))
-    private Set<Category> categories;
+    private Set<Category> categories = new HashSet<>();
 
     @Column(name = "is_deleted", nullable = false)
     private boolean isDeleted;
+
+    public void addCategory(Category category) {
+        this.categories.add(category);
+        category.getServices().add(this);
+    }
 }
 
