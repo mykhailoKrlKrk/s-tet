@@ -12,6 +12,7 @@ import lombok.experimental.Accessors;
 public class ServiceRequestDto {
     @NotEmpty
     private String name;
+
     @NotNull
     @Min(0)
     private BigDecimal masterPrice;

@@ -16,7 +16,6 @@ import org.hibernate.annotations.Where;
 @Where(clause = "is_deleted=false")
 @Table(name = "comments")
 public class Comment {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

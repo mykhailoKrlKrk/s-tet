@@ -11,7 +11,6 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 import lombok.Data;
@@ -29,18 +28,23 @@ public class Master {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(name = "name", nullable = false)
     private String name;
-    @NotNull
+
     @Column(name = "last_name", nullable = false)
     private String lastName;
+
     @Column(name = "qualification")
     @Enumerated(EnumType.STRING)
     private Qualification qualification;
+
     @Column(name = "cover_image", nullable = false)
     private String coverImage;
+
     @Column(name = "phone_number", nullable = false)
     private String phoneNumber;
+
     @ManyToMany
     @ToString.Exclude
     @EqualsAndHashCode.Exclude

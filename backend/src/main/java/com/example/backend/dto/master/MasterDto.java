@@ -1,5 +1,6 @@
 package com.example.backend.dto.master;
 
+import com.example.backend.model.Qualification;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -9,6 +10,6 @@ public class MasterDto {
     private Long id;
     private String name;
     private String lastName;
-    private String qualification;
+    private Qualification qualification;
     private String coverImage;
 }

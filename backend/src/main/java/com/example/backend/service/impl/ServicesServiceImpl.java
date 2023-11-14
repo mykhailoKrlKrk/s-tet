@@ -44,9 +44,9 @@ public class ServicesServiceImpl implements ServicesService {
     }
 
     @Override
-    public ServiceDto findById(Long id) {
-        return serviceMapper.toDto(serviceRepository.findById(id).orElseThrow(
-                () -> new EntityNotFoundException("Can't find service by id: " + id)));
+    public Service findById(Long id) {
+        return serviceRepository.findById(id).orElseThrow(
+                () -> new EntityNotFoundException("Can't find service by id: " + id));
     }
 
     @Override

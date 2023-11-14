@@ -9,7 +9,6 @@ import com.example.backend.repository.OrderRepository;
 import com.example.backend.service.MasterService;
 import com.example.backend.service.OrderService;
 import com.example.backend.service.ServicesService;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -29,16 +28,13 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public OrderResponseDto createOrder(OrderRequestDto requestDto) {
         Order order = orderMapper.toModel(requestDto);
-        order.setClientName(requestDto.getClientName());
-        order.setOrderDate(LocalDateTime.now());
-        order.setOrderTotal(requestDto.getOrderTotal());
+
         order.setMaster(masterService.findById(requestDto.getMasterId()));
-        order.setComment(requestDto.getComment());
         Set<com.example.backend.model.Service> services =
                 requestDto.getServicesId().stream()
                         .map(servicesService::findById)
-                        .map(serviceMapper::toModel)
                         .collect(Collectors.toSet());
+
         order.setServices(services);
         return orderMapper.toDto(orderRepository.save(order));
     }

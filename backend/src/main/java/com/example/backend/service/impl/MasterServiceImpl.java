@@ -8,6 +8,7 @@ import com.example.backend.model.Master;
 import com.example.backend.model.Service;
 import com.example.backend.repository.MasterRepository;
 import com.example.backend.service.MasterService;
+import com.example.backend.service.ServicesService;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Pageable;
@@ -18,6 +19,7 @@ import org.springframework.stereotype.Component;
 public class MasterServiceImpl implements MasterService {
     private final MasterRepository masterRepository;
     private final MasterMapper masterMapper;
+    private final ServicesService servicesService;
 
     @Override
     public List<MasterDto> getAll(Pageable pageable) {
@@ -44,8 +46,7 @@ public class MasterServiceImpl implements MasterService {
     @Override
     public MasterDto createMaster(MasterRequestDto requestDto) {
         Master model = masterMapper.toModel(requestDto);
-        Service service = new Service();
-        service.setId(requestDto.getServiceId());
+        Service service = servicesService.findById(requestDto.getServiceId());
         model.getServices().add(service);
         return masterMapper.toDto(masterRepository.save(model));
     }
@@ -53,7 +54,7 @@ public class MasterServiceImpl implements MasterService {
     @Override
     public Master findById(Long id) {
         return masterRepository.findById(id).orElseThrow(
-                 () -> new EntityNotFoundException("Can't find master by id: " + id));
+                () -> new EntityNotFoundException("Can't find master by id: " + id));
     }
 
     @Override

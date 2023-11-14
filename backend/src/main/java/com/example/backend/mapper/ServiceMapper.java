@@ -13,7 +13,7 @@ public interface ServiceMapper {
     @Mapping(target = "headMasterPrice", source = "service.headMasterPrice")
     ServiceDto toDto(Service service);
 
-    Service toModel(ServiceDto serviceDto);
+    Service toModelDto(ServiceDto serviceDto);
 
     Service toModel(ServiceRequestDto requestDto);
 }

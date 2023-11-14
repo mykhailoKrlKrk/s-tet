@@ -29,11 +29,14 @@ public class Service {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(nullable = false)
     private String name;
+
     @Min(0)
     @Column(name = "master_price", nullable = false)
     private BigDecimal masterPrice;
+
     @Min(0)
     @Column(name = "headmaster_price", nullable = false)
     private BigDecimal headMasterPrice;
@@ -60,4 +63,5 @@ public class Service {
         category.getServices().add(this);
     }
 }
+
 
