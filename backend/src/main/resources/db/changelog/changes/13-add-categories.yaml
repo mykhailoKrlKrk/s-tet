@@ -1,0 +1,54 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-categories
+      author: mykhailoKrk
+      changes:
+        - insert:
+            tableName: categories
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: "Hair"
+
+        - insert:
+            tableName: categories
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: "Nails"
+
+        - insert:
+            tableName: categories
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: name
+                  value: "Make up"
+
+        - insert:
+            tableName: categories
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: name
+                  value: "Men"
+
+        - insert:
+            tableName: categories
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: name
+                  value: "Bonuses"
