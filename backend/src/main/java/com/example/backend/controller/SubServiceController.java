@@ -23,33 +23,33 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(value = "/subservices")
-public class ServiceController {
+public class SubServiceController {
     private final ServicesService servicesService;
 
     @GetMapping("/{category}")
-    @Operation(summary = "Get all services by category",
-            description = "Get services that specific category support")
-    public List<ServiceDto> getAllServicesByCategory(@PathVariable String category) {
+    @Operation(summary = "Get all subservices by service",
+            description = "Get subservices that specific service support")
+    public List<ServiceDto> getAllSubServicesByService(@PathVariable String category) {
         return servicesService.getServicesByCategory(category);
     }
 
     @GetMapping
-    @Operation(summary = "Get all services",
-            description = "Get list of all available services")
+    @Operation(summary = "Get all subservices",
+            description = "Get list of all available subservices")
     public List<ServiceDto> getAll(Pageable pageable) {
         return servicesService.getAll(pageable);
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    @Operation(summary = "Create service", description = "Create new service in the DB")
-    public ServiceDto createService(@RequestBody @Valid ServiceRequestDto requestDto) {
+    @Operation(summary = "Create subservice", description = "Create new subservice in the DB")
+    public ServiceDto createSubService(@RequestBody @Valid ServiceRequestDto requestDto) {
         return servicesService.save(requestDto);
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @Operation(summary = "Delete service", description = "Delete service by specific id")
+    @Operation(summary = "Delete subservice", description = "Delete subservice by specific id")
     public void delete(@PathVariable Long id) {
         servicesService.deleteById(id);
     }

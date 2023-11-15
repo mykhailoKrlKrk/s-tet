@@ -15,3 +15,14 @@ databaseChangeLog:
       file: db/changelog/changes/08-create-orders-services-table.yaml
   - include:
       file: db/changelog/changes/09-create-masters-services-table.yaml
+  - include:
+      file: db/changelog/changes/10-add-mastersInfo.yaml
+  - include:
+      file: db/changelog/changes/11-addServicesInfo.yaml
+  - include:
+      file: db/changelog/changes/12-add-masters-services-relations.yaml
+  - include:
+      file: db/changelog/changes/13-add-categories.yaml
+  - include:
+      file: db/changelog/changes/14-add-categories-services-relations.yaml
+

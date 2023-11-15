@@ -7,7 +7,9 @@ import com.example.backend.mapper.CategoryMapper;
 import com.example.backend.model.Category;
 import com.example.backend.repository.CategoryRepository;
 import com.example.backend.service.CategoryService;
+import java.util.List;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -20,6 +22,13 @@ public class CategoryServiceImpl implements CategoryService {
     public CategoryDto save(CategoryRequestDto requestDto) {
         Category category = categoryMapper.toModel(requestDto);
         return categoryMapper.toDto(categoryRepository.save(category));
+    }
+
+    @Override
+    public List<CategoryDto> getAll(Pageable pageable) {
+        return categoryRepository.findAll().stream()
+                .map(categoryMapper::toDto)
+                .toList();
     }
 
     @Override
