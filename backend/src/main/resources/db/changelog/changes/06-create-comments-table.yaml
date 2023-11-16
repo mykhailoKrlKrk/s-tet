@@ -24,8 +24,8 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: rating
-                  type: integer
+                  name: category_id
+                  type: bigint
                   constraints:
                     nullable: false
               - column:
@@ -34,3 +34,9 @@ databaseChangeLog:
                   defaultValueBoolean: false
                   constraints:
                     nullable: false
+              - addForeignKeyConstraint:
+                  baseTableName: comments
+                  baseColumnNames: category_id
+                  referencedTableName: category
+                  referencedColumnNames: id
+                  constraintName: fk_comment_category

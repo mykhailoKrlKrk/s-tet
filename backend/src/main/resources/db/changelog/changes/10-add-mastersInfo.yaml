@@ -91,7 +91,6 @@ databaseChangeLog:
                   name: phone_number
                   value: "(096) 633-3210"
 
-
         - insert:
             tableName: masters
             columns:
@@ -100,19 +99,19 @@ databaseChangeLog:
                   value: 5
               - column:
                   name: name
-                  value: "Michael"
+                  value: "Ava"
               - column:
                   name: last_name
-                  value: "Brown"
+                  value: "Baker"
               - column:
                   name: qualification
-                  value: "HEADMASTER"
+                  value: "MASTER"
               - column:
                   name: cover_image
                   value: "image2.jpg"
               - column:
                   name: phone_number
-                  value: "(096) 633-3310"
+                  value: "(096) 633-3339"
 
         - insert:
             tableName: masters
@@ -188,7 +187,7 @@ databaseChangeLog:
                   value: 9
               - column:
                   name: name
-                  value: "Olivia"
+                  value: "Hanna"
               - column:
                   name: last_name
                   value: "Taylor"
@@ -210,7 +209,7 @@ databaseChangeLog:
                   value: 10
               - column:
                   name: name
-                  value: "Emily"
+                  value: "Olha"
               - column:
                   name: last_name
                   value: "Martin"
@@ -342,13 +341,35 @@ databaseChangeLog:
                   value: 16
               - column:
                   name: name
-                  value: "Ava"
+                  value: "Eva"
               - column:
                   name: last_name
                   value: "Baker"
               - column:
                   name: qualification
                   value: "HEADMASTER"
+              - column:
+                  name: cover_image
+                  value: "image2.jpg"
+              - column:
+                  name: phone_number
+                  value: "(096) 633-3339"
+
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 17
+              - column:
+                  name: name
+                  value: "Olivia"
+              - column:
+                  name: last_name
+                  value: "Baker"
+              - column:
+                  name: qualification
+                  value: "MASTER"
               - column:
                   name: cover_image
                   value: "image2.jpg"

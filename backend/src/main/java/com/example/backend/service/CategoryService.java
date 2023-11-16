@@ -2,7 +2,6 @@ package com.example.backend.service;
 
 import com.example.backend.dto.category.CategoryDto;
 import com.example.backend.dto.category.CategoryRequestDto;
-import com.example.backend.dto.order.OrderResponseDto;
 import com.example.backend.model.Category;
 import java.util.List;
 import org.springframework.data.domain.Pageable;

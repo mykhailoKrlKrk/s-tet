@@ -31,7 +31,7 @@ databaseChangeLog:
             tableName: masters_services
             columns:
               - column: { name: master_id, value: 5 }
-              - column: { name: service_id, value: 65 }
+              - column: { name: service_id, value: 2 }
 
         - insert:
             tableName: masters_services
@@ -43,6 +43,12 @@ databaseChangeLog:
             tableName: masters_services
             columns:
               - column: { name: master_id, value: 7 }
+              - column: { name: service_id, value: 65 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 8 }
               - column: { name: service_id, value: 65 }
 
         - insert:
@@ -79,7 +85,7 @@ databaseChangeLog:
             tableName: masters_services
             columns:
               - column: { name: master_id, value: 13 }
-              - column: { name: service_id, value: 50 }
+              - column: { name: service_id, value: 38 }
 
         - insert:
             tableName: masters_services
@@ -97,4 +103,10 @@ databaseChangeLog:
             tableName: masters_services
             columns:
               - column: { name: master_id, value: 16 }
+              - column: { name: service_id, value: 50 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 17 }
               - column: { name: service_id, value: 50 }

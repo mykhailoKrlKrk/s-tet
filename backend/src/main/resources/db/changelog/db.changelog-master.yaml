@@ -25,4 +25,6 @@ databaseChangeLog:
       file: db/changelog/changes/13-add-categories.yaml
   - include:
       file: db/changelog/changes/14-add-categories-services-relations.yaml
+  - include:
+      file: db/changelog/changes/15-add-commentsData.yaml
 

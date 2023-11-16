@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Formatter {
-    String message() default "Invalid comment format";
+    String message() default "Invalid string format";
 
     Class<?>[] groups() default {};
 
