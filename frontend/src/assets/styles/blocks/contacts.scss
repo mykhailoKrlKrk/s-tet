@@ -7,6 +7,7 @@
 
   &__contant {
     display: flex;
+    margin-bottom: 40px;
 
     @media (max-width: 820px) {
       flex-direction: column;
@@ -63,5 +64,13 @@
     &--adress::before {
       background-image: url('../../images/icons/location.svg');
     }
+  }
+
+  &__phrase {
+    text-align: center;
+    font-family: LilyScriptOne;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 2px;
   }
 }

@@ -90,7 +90,7 @@ export default function HomePage() {
           <p className="welcome__subtitle">
             World of beauty, pleasure, and transformation.
           </p>
-          <Link to="booking" className="welcome__booking">
+          <Link to="booking" className="welcome__booking booking-button">
             Book now
             <span className="first"></span>
             <span className="second"></span>
@@ -225,6 +225,7 @@ export default function HomePage() {
               </p>
             </div>
           </div>
+          <p className="contacts__phrase">We are waiting for you!</p>
         </div>
       </section>
     </div>

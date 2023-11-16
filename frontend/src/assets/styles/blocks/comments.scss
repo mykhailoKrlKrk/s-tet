@@ -1,0 +1,46 @@
+.comments {
+  padding-top: 100px;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__cards {
+    display: flex;
+    margin: 0 -10px;
+  }
+
+  &__card {
+    width: 33.333%;
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+
+  &__text {
+    display: flex;
+    margin-bottom: 20px;
+
+    &::before {
+      content: '';
+      display: block;
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      margin-right: 20px;
+      background: center / contain no-repeat url('../../images/icons/quote.svg');
+    }
+  }
+
+  &__author {
+    font-size: 18px;
+    text-align: right;
+    padding: 0 20px;
+    font-style: italic;
+    font-weight: 500;
+  }
+}
