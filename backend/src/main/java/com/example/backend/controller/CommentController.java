@@ -9,18 +9,26 @@ import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @Tag(name = "Comments  management", description = "Endpoints for comments")
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:3000", methods = {
+        RequestMethod.GET,
+        RequestMethod.DELETE,
+        RequestMethod.PUT,
+        RequestMethod.POST
+})
 @RequestMapping("/comments")
 public class CommentController {
     private final CommentService commentService;
@@ -32,11 +40,19 @@ public class CommentController {
         return commentService.getAllComments();
     }
 
-    @PostMapping
+    @GetMapping("/{category}")
+    @Operation(summary = "Get all comments by service",
+            description = "Get list of all available comments by service")
+    public List<CommentDto> getCommentsByCategory(@PathVariable String category) {
+        return commentService.getCommentsByCategory(category);
+    }
+
+    @PostMapping("/{category}")
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Create comment", description = "Create new comment in the DB")
-    public CommentDto createService(@RequestBody @Valid CommentRequestDto requestDto) {
-        return commentService.create(requestDto);
+    public CommentDto createService(@RequestBody @Valid CommentRequestDto requestDto,
+                                    @PathVariable String category) {
+        return commentService.create(requestDto, category);
     }
 
     @DeleteMapping("/{id}")

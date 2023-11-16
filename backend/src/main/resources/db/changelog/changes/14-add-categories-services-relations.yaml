@@ -1,0 +1,431 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-categories-services-relations
+      author: mykhailoKrk
+      changes:
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 1 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 2 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 3 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 4 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 5 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 6 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 7 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 8 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 9 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 10 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 11 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 12 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 13 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 14 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 16 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 17 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 18 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 19 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 20 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 21 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 22 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 23 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 24 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 25 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 26 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 27 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 28 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 29 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 30 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 31 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 32 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 33 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 34 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 35 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 36 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 1 }
+              - column: { name: service_id, value: 37 }
+
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 2 }
+              - column: { name: service_id, value: 38 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 2 }
+              - column: { name: service_id, value: 39 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 2 }
+              - column: { name: service_id, value: 40 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 2 }
+              - column: { name: service_id, value: 41 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 2 }
+              - column: { name: service_id, value: 42 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 2 }
+              - column: { name: service_id, value: 43 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 2 }
+              - column: { name: service_id, value: 44 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 2 }
+              - column: { name: service_id, value: 45 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 2 }
+              - column: { name: service_id, value: 46 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 2 }
+              - column: { name: service_id, value: 47 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 2 }
+              - column: { name: service_id, value: 48 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 2 }
+              - column: { name: service_id, value: 49 }
+
+
+
+
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 3 }
+              - column: { name: service_id, value: 50 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 3 }
+              - column: { name: service_id, value: 51 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 3 }
+              - column: { name: service_id, value: 52 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 3 }
+              - column: { name: service_id, value: 53 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 3 }
+              - column: { name: service_id, value: 54 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 3 }
+              - column: { name: service_id, value: 55 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 3 }
+              - column: { name: service_id, value: 56 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 3 }
+              - column: { name: service_id, value: 57 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 3 }
+              - column: { name: service_id, value: 58 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 3 }
+              - column: { name: service_id, value: 59 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 3 }
+              - column: { name: service_id, value: 60 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 3 }
+              - column: { name: service_id, value: 61 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 3 }
+              - column: { name: service_id, value: 62 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 3 }
+              - column: { name: service_id, value: 63 }
+
+
+
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 4 }
+              - column: { name: service_id, value: 64 }
+
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 4 }
+              - column: { name: service_id, value: 65 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 4 }
+              - column: { name: service_id, value: 66 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 4 }
+              - column: { name: service_id, value: 67 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 4 }
+              - column: { name: service_id, value: 68 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 4 }
+              - column: { name: service_id, value: 69 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 4 }
+              - column: { name: service_id, value: 70 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 4 }
+              - column: { name: service_id, value: 71 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 4 }
+              - column: { name: service_id, value: 72 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 4 }
+              - column: { name: service_id, value: 73 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 4 }
+              - column: { name: service_id, value: 74 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 4 }
+              - column: { name: service_id, value: 75 }
+        - insert:
+            tableName: services_categories
+            columns:
+              - column: { name: category_id, value: 4 }
+              - column: { name: service_id, value: 76 }

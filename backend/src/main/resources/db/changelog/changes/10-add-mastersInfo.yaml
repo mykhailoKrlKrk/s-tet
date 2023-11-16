@@ -1,0 +1,378 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-masters
+      author: mykhailoKrk
+      changes:
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: "Olivia"
+              - column:
+                  name: last_name
+                  value: "Doe"
+              - column:
+                  name: qualification
+                  value: "MASTER"
+              - column:
+                  name: cover_image
+                  value: "image1.jpg"
+              - column:
+                  name: phone_number
+                  value: "(067) 393-3838"
+
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: "Jane"
+              - column:
+                  name: last_name
+                  value: "Smith"
+              - column:
+                  name: qualification
+                  value: "HEADMASTER"
+              - column:
+                  name: cover_image
+                  value: "image2.jpg"
+              - column:
+                  name: phone_number
+                  value: "(096) 654-3210"
+
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: name
+                  value: "Emily"
+              - column:
+                  name: last_name
+                  value: "Johnson"
+              - column:
+                  name: qualification
+                  value: "MASTER"
+              - column:
+                  name: cover_image
+                  value: "image2.jpg"
+              - column:
+                  name: phone_number
+                  value: "(096) 654-3210"
+
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: name
+                  value: "Eva"
+              - column:
+                  name: last_name
+                  value: "Williams"
+              - column:
+                  name: qualification
+                  value: "HEADMASTER"
+              - column:
+                  name: cover_image
+                  value: "image2.jpg"
+              - column:
+                  name: phone_number
+                  value: "(096) 633-3210"
+
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: name
+                  value: "Ava"
+              - column:
+                  name: last_name
+                  value: "Baker"
+              - column:
+                  name: qualification
+                  value: "MASTER"
+              - column:
+                  name: cover_image
+                  value: "image2.jpg"
+              - column:
+                  name: phone_number
+                  value: "(096) 633-3339"
+
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 6
+              - column:
+                  name: name
+                  value: "Robert"
+              - column:
+                  name: last_name
+                  value: "Jones"
+              - column:
+                  name: qualification
+                  value: "HEADMASTER"
+              - column:
+                  name: cover_image
+                  value: "image2.jpg"
+              - column:
+                  name: phone_number
+                  value: "(096) 633-3330"
+
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 7
+              - column:
+                  name: name
+                  value: "William"
+              - column:
+                  name: last_name
+                  value: "Clark"
+              - column:
+                  name: qualification
+                  value: "MASTER"
+              - column:
+                  name: cover_image
+                  value: "image2.jpg"
+              - column:
+                  name: phone_number
+                  value: "(096) 633-3330"
+
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 8
+              - column:
+                  name: name
+                  value: "Daniel"
+              - column:
+                  name: last_name
+                  value: "Hall"
+              - column:
+                  name: qualification
+                  value: "MASTER"
+              - column:
+                  name: cover_image
+                  value: "image2.jpg"
+              - column:
+                  name: phone_number
+                  value: "(096) 633-3330"
+
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 9
+              - column:
+                  name: name
+                  value: "Hanna"
+              - column:
+                  name: last_name
+                  value: "Taylor"
+              - column:
+                  name: qualification
+                  value: "HEADMASTER"
+              - column:
+                  name: cover_image
+                  value: "image2.jpg"
+              - column:
+                  name: phone_number
+                  value: "(096) 633-3330"
+
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 10
+              - column:
+                  name: name
+                  value: "Olha"
+              - column:
+                  name: last_name
+                  value: "Martin"
+              - column:
+                  name: qualification
+                  value: "HEADMASTER"
+              - column:
+                  name: cover_image
+                  value: "image2.jpg"
+              - column:
+                  name: phone_number
+                  value: "(096) 633-3339"
+
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 11
+              - column:
+                  name: name
+                  value: "Ava"
+              - column:
+                  name: last_name
+                  value: "Martin"
+              - column:
+                  name: qualification
+                  value: "MASTER"
+              - column:
+                  name: cover_image
+                  value: "image2.jpg"
+              - column:
+                  name: phone_number
+                  value: "(096) 633-3339"
+
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 12
+              - column:
+                  name: name
+                  value: "Emily"
+              - column:
+                  name: last_name
+                  value: "Brown"
+              - column:
+                  name: qualification
+                  value: "MASTER"
+              - column:
+                  name: cover_image
+                  value: "image2.jpg"
+              - column:
+                  name: phone_number
+                  value: "(096) 633-3339"
+
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 13
+              - column:
+                  name: name
+                  value: "Eva"
+              - column:
+                  name: last_name
+                  value: "Brown"
+              - column:
+                  name: qualification
+                  value: "MASTER"
+              - column:
+                  name: cover_image
+                  value: "image2.jpg"
+              - column:
+                  name: phone_number
+                  value: "(096) 633-3339"
+
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 14
+              - column:
+                  name: name
+                  value: "Sophia"
+              - column:
+                  name: last_name
+                  value: "Miller"
+              - column:
+                  name: qualification
+                  value: "MASTER"
+              - column:
+                  name: cover_image
+                  value: "image2.jpg"
+              - column:
+                  name: phone_number
+                  value: "(096) 633-3339"
+
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 15
+              - column:
+                  name: name
+                  value: "Emily"
+              - column:
+                  name: last_name
+                  value: "Miller"
+              - column:
+                  name: qualification
+                  value: "HEADMASTER"
+              - column:
+                  name: cover_image
+                  value: "image2.jpg"
+              - column:
+                  name: phone_number
+                  value: "(096) 633-3339"
+
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 16
+              - column:
+                  name: name
+                  value: "Eva"
+              - column:
+                  name: last_name
+                  value: "Baker"
+              - column:
+                  name: qualification
+                  value: "HEADMASTER"
+              - column:
+                  name: cover_image
+                  value: "image2.jpg"
+              - column:
+                  name: phone_number
+                  value: "(096) 633-3339"
+
+        - insert:
+            tableName: masters
+            columns:
+              - column:
+                  name: id
+                  value: 17
+              - column:
+                  name: name
+                  value: "Olivia"
+              - column:
+                  name: last_name
+                  value: "Baker"
+              - column:
+                  name: qualification
+                  value: "MASTER"
+              - column:
+                  name: cover_image
+                  value: "image2.jpg"
+              - column:
+                  name: phone_number
+                  value: "(096) 633-3339"

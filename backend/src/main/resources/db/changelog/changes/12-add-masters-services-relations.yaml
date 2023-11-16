@@ -1,0 +1,112 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-services
+      author: mykhailoKrk
+      changes:
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 1 }
+              - column: { name: service_id, value: 2 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 2 }
+              - column: { name: service_id, value: 2 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 3 }
+              - column: { name: service_id, value: 2 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 4 }
+              - column: { name: service_id, value: 2 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 5 }
+              - column: { name: service_id, value: 2 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 6 }
+              - column: { name: service_id, value: 65 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 7 }
+              - column: { name: service_id, value: 65 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 8 }
+              - column: { name: service_id, value: 65 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 8 }
+              - column: { name: service_id, value: 65 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 9 }
+              - column: { name: service_id, value: 38 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 10 }
+              - column: { name: service_id, value: 38 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 11 }
+              - column: { name: service_id, value: 38 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 12 }
+              - column: { name: service_id, value: 38 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 13 }
+              - column: { name: service_id, value: 38 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 14 }
+              - column: { name: service_id, value: 50 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 15 }
+              - column: { name: service_id, value: 50 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 16 }
+              - column: { name: service_id, value: 50 }
+
+        - insert:
+            tableName: masters_services
+            columns:
+              - column: { name: master_id, value: 17 }
+              - column: { name: service_id, value: 50 }

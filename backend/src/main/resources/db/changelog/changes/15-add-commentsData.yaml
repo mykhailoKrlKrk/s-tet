@@ -1,0 +1,188 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-comments
+      author: mykhailoKrk
+      changes:
+        - insert:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: full_name
+                  value: "Anna"
+              - column:
+                  name: description
+                  value: "I had a wonderful experience with the women's hair master, Hanna, at this salon. She listened to my preferences, gave expert advice, and transformed my hair into a work of art. I left feeling like a new person!"
+              - column:
+                  name: category_id
+                  value: 1
+        - insert:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: full_name
+                  value: "Joe"
+              - column:
+                  name: description
+                  value: "Hanna is incredibly talented. I went in with a vague idea, and she turned it into a stunning hairstyle. The salon's ambiance is delightful, and I'll definitely be returning for more."
+              - column:
+                  name: category_id
+                  value: 1
+        - insert:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: full_name
+                  value: "Billy"
+              - column:
+                  name: description
+                  value: "I've finally found my go-to salon for women's hair services. The hair master here is a magician. I appreciate the attention to detail, and the salon's comfortable environment adds to the overall experience."
+              - column:
+                  name: category_id
+                  value: 1
+
+        - insert:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: full_name
+                  value: "Ella"
+              - column:
+                  name: description
+                  value: "I had a fantastic experience with the nail master at this salon! The attention to detail was impeccable, and my nails looked stunning. The atmosphere was relaxing, and I left feeling pampered and confident."
+              - column:
+                  name: category_id
+                  value: 2
+        - insert:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: full_name
+                  value: "Aria"
+              - column:
+                  name: description
+                  value: "I visited the nail master, Olha, for the first time, and I was amazed by the level of professionalism. She helped me choose the perfect nail color, and the results exceeded my expectations. I'll definitely be coming back."
+              - column:
+                  name: category_id
+                  value: 2
+        - insert:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  value: 6
+              - column:
+                  name: full_name
+                  value: "Lily"
+              - column:
+                  name: description
+                  value: "The nail master, Olha, here, is a true artist! My nails have never looked better. The service was prompt, and the quality of the work was exceptional. I highly recommend this salon for nail services."
+              - column:
+                  name: category_id
+                  value: 2
+        - insert:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  value: 7
+              - column:
+                  name: full_name
+                  value: "Ellie"
+              - column:
+                  name: description
+                  value: "I visited the make-up master Eva for a special occasion, and I couldn't be happier with the result. He created an elegant and natural look, enhancing my features perfectly."
+              - column:
+                  name: category_id
+                  value: 3
+        - insert:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  value: 8
+              - column:
+                  name: full_name
+                  value: "Grace"
+              - column:
+                  name: description
+                  value: "The make-up master's skills are beyond impressive. He understood the look I wanted and executed it flawlessly. I received so many compliments on my make-up, thanks to Eva`s expertise."
+              - column:
+                  name: category_id
+                  value: 3
+        - insert:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  value: 9
+              - column:
+                  name: full_name
+                  value: "Zoe"
+              - column:
+                  name: description
+                  value: "I've had my make-up done by various artists, but the make-up master at this salon stands out. Eva has a keen eye for detail, and the make-up lasted all day and night. I'm delighted with the service."
+              - column:
+                  name: category_id
+                  value: 3
+
+        - insert:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  value: 10
+              - column:
+                  name: full_name
+                  value: "Daniel"
+              - column:
+                  name: description
+                  value: "I've been going to the men's hair masters at this salon for a while now, and they consistently provide top-notch haircuts. The attention to detail and the relaxed atmosphere make every visit enjoyable.."
+              - column:
+                  name: category_id
+                  value: 4
+        - insert:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  value: 11
+              - column:
+                  name: full_name
+                  value: "Anthony"
+              - column:
+                  name: description
+                  value: "William, hair master, knew exactly what I wanted, and I left with the perfect haircut. The staff is friendly, and the salon has a great vibe. I'll continue to be a loyal customer."
+              - column:
+                  name: category_id
+                  value: 4
+        - insert:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  value: 12
+              - column:
+                  name: full_name
+                  value: "Donald"
+              - column:
+                  name: description
+                  value: "As a guy who's particular about his hair, I'm thrilled to have found this salon. The men's hair master, Serhii, is skilled and always delivers a great haircut. I appreciate the quality service and the stylish results."
+              - column:
+                  name: category_id
+                  value: 4
+
