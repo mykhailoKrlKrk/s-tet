@@ -129,9 +129,11 @@ export default function Header() {
         </nav>
 
         <div className="header__actions">
-          <Link to="booking" className="header__booking-button">
-            Book
-          </Link>
+          {location.pathname !== '/booking' && (
+            <Link to="booking" className="header__booking-button">
+              Book
+            </Link>
+          )}
           <button className="header__menu-button" onClick={handleMenuClick}>
             {isMenu ? 'Close' : 'Menu'}
           </button>

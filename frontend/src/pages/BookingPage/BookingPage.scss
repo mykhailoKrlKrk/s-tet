@@ -8,9 +8,13 @@
     grid-template-columns: 70% 30%;
     column-gap: 30px;
 
-    @media (max-width: 780px) {
+    @media (max-width: 820px) {
       display: block;
     }
+  }
+
+  &__right-column {
+    padding-top: 15px;
   }
 
   &__title {
@@ -56,10 +60,25 @@
     font-weight: 500;
     cursor: pointer;
     color: $col-brown;
+    border-radius: 10px;
 
     &--active {
       background-color: $col-brown;
       color: #fff;
+    }
+  }
+
+  &__price-switcher {
+    display: flex;
+    width: 170px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 20px auto;
+    font-size: 18px;
+    font-weight: 500;
+    
+    label {
+      cursor: pointer;
     }
   }
 
@@ -96,6 +115,10 @@
     cursor: pointer;
     transition: $trans-duration;
     border: 2px solid rgba(255, 255, 255, 0);
+
+    &:hover {
+      filter: brightness(1.1);
+    }
 
     &--active{
       box-shadow: 0 7px 50px 10px #000000aa;
@@ -154,15 +177,30 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+    border-radius: 10px;
+  }
+
+  &__personal-container {
+    position: relative;
+  }
+
+  &__notification {
+    font-size: 13px;
+    color: red;
+    text-align: end;
+    position: absolute;
+    right: 0;
+    top: -14px;
   }
 
   &__personal {
     display: block;
     width: 100%;
-    margin: 10px 0;
-    padding: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
     font-size: 16px;
     box-shadow: 0px 0px 7px 1px #42280091 inset;
+    border-radius: 10px;
 
     &--textarea {
       height: 100px;
@@ -173,6 +211,7 @@
     &::placeholder {
       color: #000;
       opacity: 0.75;
+      font-size: 14px;
     }
 
     &:focus {
@@ -185,6 +224,7 @@
     color: gray;
     text-align: center;
     margin-bottom: 24px;
+    font-style: oblique;
   }
 
   &__order-list {
@@ -195,14 +235,21 @@
     font-weight: 500;
     font-size: 16px;
     margin-bottom: 14px;
+    padding-bottom: 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #000;
+    }
   }
 
   &__remove-item {
+    flex-shrink: 0;
     width: 20px;
     height: 20px;
+    margin-left: 20px;
     border-radius: 5px;
     border: 2px solid #000;
     background: center / 50% no-repeat url('../../assets/images/icons/remove.svg');
@@ -232,5 +279,13 @@
       color: #fff;
       cursor:not-allowed;
     }
+  }
+
+  &__loader-container {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

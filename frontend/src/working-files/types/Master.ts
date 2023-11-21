@@ -3,5 +3,5 @@ export interface Master {
   name: string;
   lastName: string;
   qualification: string;
-  coverImage: number;
+  coverImage: string;
 }

@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import './Footer.scss';
 
 export default function Footer() {
   return (
     <footer className="stet__footer footer">
       <div className="footer__container _container">
-        <a href="/" className="logo">
+        <a href="/" className="logo footer__logo">
           <img
             src="./img/logo/logo-white.svg"
             alt="s-tet"
@@ -15,24 +16,34 @@ export default function Footer() {
         <nav className="footer__navbar">
           <ul className="footer__navbar-list">
             <li className="footer__navbar-item">
-              <a href="#services" className="footer__navbar-link">
-                Services
-              </a>
+              <Link to="/" className="footer__navbar-link">
+                Home
+              </Link>
             </li>
             <li className="footer__navbar-item">
-              <a href="#about" className="footer__navbar-link">
-                About
-              </a>
+              <Link to="hair" className="footer__navbar-link">
+                Hair
+              </Link>
             </li>
             <li className="footer__navbar-item">
-              <a href="#contacts" className="footer__navbar-link">
-                Contacts
-              </a>
+              <Link to="nails" className="footer__navbar-link">
+                Nails
+              </Link>
             </li>
             <li className="footer__navbar-item">
-              <a href="" className="footer__navbar-link">
-                Other Item 4
-              </a>
+              <Link to="makeup" className="footer__navbar-link">
+                Make up
+              </Link>
+            </li>
+            <li className="footer__navbar-item">
+              <Link to="men" className="footer__navbar-link">
+                Men
+              </Link>
+            </li>
+            <li className="footer__navbar-item">
+              <Link to="booking" className="footer__navbar-link">
+                Booking
+              </Link>
             </li>
           </ul>
         </nav>
