@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 import java.util.List;
 import lombok.Data;
 import lombok.experimental.Accessors;
+import org.hibernate.validator.constraints.Length;
 
 @Data
 @Accessors(chain = true)
@@ -16,20 +17,21 @@ public class OrderRequestDto {
 
     @NotEmpty
     @Formatter
+    @Length(min = 3, max = 25)
     private String clientName;
     @NotEmpty
     @PhoneNumber
     private String phoneNumber;
     @NotNull
-    @Min(0)
+    @Min(200)
     private BigDecimal orderTotal;
     @NotNull
     private Long masterId;
     @NotNull
     private List<Long> servicesId;
 
-    @NotEmpty
     @Formatter
+    @Length(min = 5, max = 500)
     private String comment;
 }
 

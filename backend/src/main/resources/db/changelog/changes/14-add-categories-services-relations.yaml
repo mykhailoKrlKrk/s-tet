@@ -19,12 +19,6 @@ databaseChangeLog:
             tableName: services_categories
             columns:
               - column: { name: category_id, value: 1 }
-              - column: { name: service_id, value: 3 }
-
-        - insert:
-            tableName: services_categories
-            columns:
-              - column: { name: category_id, value: 1 }
               - column: { name: service_id, value: 4 }
 
         - insert:

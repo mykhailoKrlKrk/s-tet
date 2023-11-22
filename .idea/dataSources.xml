@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="s-tet@localhost" uuid="45dae250-9163-466d-9cb8-2c06adf4859e">
+    <data-source source="LOCAL" name="s-tet@localhost" uuid="bb5b68b7-bcd3-4b98-afc6-90e36c4804a2">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/s-tet</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="stet@s-tet-db.cj24anxetrwx.us-east-1.rds.amazonaws.com" uuid="7a1e5238-082c-446f-810b-2a2cb00aaef6">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://s-tet-db.cj24anxetrwx.us-east-1.rds.amazonaws.com:3306/stet</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

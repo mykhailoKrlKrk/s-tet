@@ -6,6 +6,7 @@ import com.example.backend.exception.EntityNotFoundException;
 import com.example.backend.mapper.MasterMapper;
 import com.example.backend.model.Master;
 import com.example.backend.model.Service;
+import com.example.backend.repository.CategoryRepository;
 import com.example.backend.repository.MasterRepository;
 import com.example.backend.service.MasterService;
 import com.example.backend.service.ServicesService;
@@ -20,6 +21,7 @@ public class MasterServiceImpl implements MasterService {
     private final MasterRepository masterRepository;
     private final MasterMapper masterMapper;
     private final ServicesService servicesService;
+    private final CategoryRepository categoryRepository;
 
     @Override
     public List<MasterDto> getAll(Pageable pageable) {
@@ -38,6 +40,8 @@ public class MasterServiceImpl implements MasterService {
 
     @Override
     public List<MasterDto> getMastersByCategory(String category) {
+        categoryRepository.findByName(category).orElseThrow(
+                () -> new EntityNotFoundException("Can't find category with name: " + category));
         return masterRepository.getMastersByCategory(category).stream()
                 .map(masterMapper::toDto)
                 .toList();

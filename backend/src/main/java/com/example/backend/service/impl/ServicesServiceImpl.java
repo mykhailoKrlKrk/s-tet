@@ -6,6 +6,7 @@ import com.example.backend.exception.EntityNotFoundException;
 import com.example.backend.mapper.ServiceMapper;
 import com.example.backend.model.Category;
 import com.example.backend.model.Service;
+import com.example.backend.repository.CategoryRepository;
 import com.example.backend.repository.ServiceRepository;
 import com.example.backend.service.CategoryService;
 import com.example.backend.service.ServicesService;
@@ -20,9 +21,12 @@ public class ServicesServiceImpl implements ServicesService {
     private final ServiceRepository serviceRepository;
     private final ServiceMapper serviceMapper;
     private final CategoryService categoryService;
+    private final CategoryRepository categoryRepository;
 
     @Override
     public List<ServiceDto> getServicesByCategory(String category) {
+        categoryRepository.findByName(category).orElseThrow(
+                () -> new EntityNotFoundException("Can't find category with name: " + category));
         return serviceRepository.getServicesByCategoryName(category).stream()
                 .map(serviceMapper::toDto)
                 .toList();

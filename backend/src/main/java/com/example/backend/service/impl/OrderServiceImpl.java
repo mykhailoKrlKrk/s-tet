@@ -2,13 +2,14 @@ package com.example.backend.service.impl;
 
 import com.example.backend.dto.order.OrderRequestDto;
 import com.example.backend.dto.order.OrderResponseDto;
+import com.example.backend.exception.EntityNotFoundException;
 import com.example.backend.mapper.OrderMapper;
-import com.example.backend.mapper.ServiceMapper;
 import com.example.backend.model.Order;
 import com.example.backend.repository.OrderRepository;
 import com.example.backend.service.MasterService;
 import com.example.backend.service.OrderService;
 import com.example.backend.service.ServicesService;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -21,7 +22,6 @@ import org.springframework.stereotype.Service;
 public class OrderServiceImpl implements OrderService {
     private final MasterService masterService;
     private final ServicesService servicesService;
-    private final ServiceMapper serviceMapper;
     private final OrderRepository orderRepository;
     private final OrderMapper orderMapper;
 
@@ -36,6 +36,7 @@ public class OrderServiceImpl implements OrderService {
                         .collect(Collectors.toSet());
 
         order.setServices(services);
+        order.setOrderDate(LocalDateTime.now());
         return orderMapper.toDto(orderRepository.save(order));
     }
 
@@ -48,6 +49,8 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void delete(Long id) {
+        orderRepository.findById(id).orElseThrow(
+                () -> new EntityNotFoundException("Can't find master by id: " + id));
         orderRepository.deleteById(id);
     }
 }
