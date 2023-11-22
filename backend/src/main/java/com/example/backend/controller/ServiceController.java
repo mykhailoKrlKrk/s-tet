@@ -24,12 +24,14 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "Service management", description = "Endpoints for services")
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000", methods = {
-        RequestMethod.GET,
-        RequestMethod.DELETE,
-        RequestMethod.PUT,
-        RequestMethod.POST
-})
+@CrossOrigin(origins = {"http://localhost:3000",
+        "https://mykhailokrlkrk.github.io/s-tet/"},
+        methods = {
+                RequestMethod.GET,
+                RequestMethod.DELETE,
+                RequestMethod.PUT,
+                RequestMethod.POST
+        })
 @RequestMapping(value = "/services")
 public class ServiceController {
     private final CategoryService categoryService;

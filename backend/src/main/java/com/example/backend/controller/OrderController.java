@@ -24,12 +24,14 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "Manage orders", description = "Endpoints for orders")
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000", methods = {
-        RequestMethod.GET,
-        RequestMethod.DELETE,
-        RequestMethod.PUT,
-        RequestMethod.POST
-})
+@CrossOrigin(origins = {"http://localhost:3000",
+        "https://mykhailokrlkrk.github.io/s-tet/"},
+        methods = {
+                RequestMethod.GET,
+                RequestMethod.DELETE,
+                RequestMethod.PUT,
+                RequestMethod.POST
+        })
 @RequestMapping(value = "/orders")
 public class OrderController {
     private final OrderService orderService;

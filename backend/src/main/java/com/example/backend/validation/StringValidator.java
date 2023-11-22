@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 public class StringValidator implements ConstraintValidator<Formatter, String> {
     public static final String COMMENT_PATTERN =
-            "^(?!\\s+)(?![\\p{P}\\s]+$)(?!\\d+$)(?!(.)\\1*$)(?!.*[!&@*#]+)(?!.*\\d).*";
+            "^(?!\\s+$)(?![\\p{P}\\s]+$)(?!\\d+$)(?!(.)\\1*$)(?!.*[!&@*#]+)(?!.*\\d)\\S.*\\S$";
 
     @Override
     public boolean isValid(String comment, ConstraintValidatorContext constraintValidatorContext) {

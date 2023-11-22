@@ -5,6 +5,7 @@ import com.example.backend.dto.master.MasterRequestDto;
 import com.example.backend.service.MasterService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
@@ -23,12 +24,14 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "Masters management", description = "Endpoints for masters")
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000", methods = {
-        RequestMethod.GET,
-        RequestMethod.DELETE,
-        RequestMethod.PUT,
-        RequestMethod.POST
-})
+@CrossOrigin(origins = {"http://localhost:3000",
+        "https://mykhailokrlkrk.github.io/s-tet/"},
+        methods = {
+                RequestMethod.GET,
+                RequestMethod.DELETE,
+                RequestMethod.PUT,
+                RequestMethod.POST
+        })
 @RequestMapping(value = "/masters")
 public class MasterController {
 
@@ -52,7 +55,7 @@ public class MasterController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Create master", description = "Create new master in the DB")
-    public MasterDto createMaster(@RequestBody MasterRequestDto requestDto) {
+    public MasterDto createMaster(@RequestBody @Valid MasterRequestDto requestDto) {
         return masterService.createMaster(requestDto);
     }
 

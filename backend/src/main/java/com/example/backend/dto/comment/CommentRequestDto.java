@@ -10,7 +10,7 @@ import org.hibernate.validator.constraints.Length;
 public class CommentRequestDto {
     @NotEmpty
     @NotNull
-    @Length(max = 25)
+    @Length(min = 3, max = 25)
     @Formatter
     private String fullName;
     @NotEmpty
