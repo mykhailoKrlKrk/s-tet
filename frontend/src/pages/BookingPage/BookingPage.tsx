@@ -367,11 +367,12 @@ export default function BookingPage() {
               value={clientPhone}
               onChange={handleClientPhoneChange}
             /> */}
-            {/* <PhoneInput
+            <PhoneInput
+              className="booking__phone-input"
               defaultCountry="ua"
               value={phone}
               onChange={(phone) => setPhone(phone)}
-            /> */}
+            />
           </div>
           <textarea
             className="booking__personal booking__personal--textarea"

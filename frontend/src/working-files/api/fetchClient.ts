@@ -1,6 +1,6 @@
 import { Order } from '../types/Order';
 
-const BASE_URL = 'http://ec2-54-174-204-210.compute-1.amazonaws.com/api/';
+const BASE_URL = 'http://ec2-34-192-33-253.compute-1.amazonaws.com/api/';
 
 type RequestMethod = 'GET' | 'POST';
 

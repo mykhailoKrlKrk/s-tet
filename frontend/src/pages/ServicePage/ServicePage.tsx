@@ -21,9 +21,9 @@ export default function ServicePage() {
   const [isLoading, setLoading] = useState(true);
 
   const works = [
-    `./s-tet/img/${category}__works/works__${category}-1.jpg`,
-    `./s-tet/img/${category}__works/works__${category}-2.jpg`,
-    `./s-tet/img/${category}__works/works__${category}-3.jpg`,
+    `./img/${category}__works/works__${category}-1.jpg`,
+    `./img/${category}__works/works__${category}-2.jpg`,
+    `./img/${category}__works/works__${category}-3.jpg`,
     `./img/${category}__works/works__${category}-4.jpg`,
     `./img/${category}__works/works__${category}-5.jpg`,
     `./img/${category}__works/works__${category}-6.jpg`,
