@@ -1,5 +1,5 @@
 .welcome {
-  height: 800px;
+  height: 700px;
   display: grid;
   position: relative;
 
@@ -49,7 +49,7 @@
     font-family: LilyScriptOne;
     font-size: 120px;
     text-shadow: 2px 2px 4px #534949;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     
     &--toCapitalize {
       text-transform: capitalize;
@@ -74,7 +74,7 @@
     text-align: center;
     line-height: 130%;
     letter-spacing: 1.5px;
-    margin-bottom: 110px;
+    margin-bottom: 70px;
 
     @media (max-width: 940px) {
       font-size: 18px;

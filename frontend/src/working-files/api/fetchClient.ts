@@ -9,7 +9,9 @@ function request<T>(
   method: RequestMethod = 'GET',
   data: Order | null = null,
 ): Promise<T> {
-  const options: RequestInit = { method };
+  const options: RequestInit = {
+    method,
+  };
 
   if (data) {
     options.body = JSON.stringify(data);

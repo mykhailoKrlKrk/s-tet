@@ -5,4 +5,5 @@ export interface Order {
   masterId: number;
   servicesId: number[];
   comment: string;
+  errors?: string[];
 }

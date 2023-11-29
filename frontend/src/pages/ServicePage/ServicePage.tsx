@@ -103,9 +103,7 @@ export default function ServicePage() {
               <div key={master.id} className="masters__master-card">
                 <div className="masters__img-container">
                   <img
-                    src={`./img/${category}__masters/master-${
-                      masters.findIndex((m) => m.id === master.id) + 1
-                    }.jpg`}
+                    src={master.coverImage}
                     alt=""
                     className="masters__img"
                   />
@@ -125,7 +123,7 @@ export default function ServicePage() {
           <h2 className="prices__title title">Prices</h2>
 
           <div className="prices__price-switcher">
-            <label htmlFor="cbx-3">Head Master</label>
+            <label htmlFor="cbx-3">Headmaster</label>
             <div className="price-switcher">
               <input
                 type="checkbox"
