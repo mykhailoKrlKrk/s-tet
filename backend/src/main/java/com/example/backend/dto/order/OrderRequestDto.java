@@ -1,7 +1,6 @@
 package com.example.backend.dto.order;
 
 import com.example.backend.validation.Formatter;
-import com.example.backend.validation.PhoneNumber;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -20,7 +19,6 @@ public class OrderRequestDto {
     @Length(min = 3, max = 25)
     private String clientName;
     @NotEmpty
-    @PhoneNumber
     private String phoneNumber;
     @NotNull
     @Min(200)
@@ -30,8 +28,7 @@ public class OrderRequestDto {
     @NotNull
     private List<Long> servicesId;
 
-    @Formatter
-    @Length(min = 5, max = 500)
+    @Length(max = 500)
     private String comment;
 }
 

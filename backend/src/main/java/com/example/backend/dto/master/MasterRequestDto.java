@@ -2,7 +2,6 @@ package com.example.backend.dto.master;
 
 import com.example.backend.model.Qualification;
 import com.example.backend.validation.Formatter;
-import com.example.backend.validation.PhoneNumber;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
@@ -17,12 +16,7 @@ public class MasterRequestDto {
     @NotEmpty
     @Length(min = 3, max = 25)
     @Formatter
-    private String name;
-
-    @NotEmpty
-    @Length(min = 3, max = 25)
-    @Formatter
-    private String lastName;
+    private String fullName;
 
     @NotNull
     private Qualification qualification;
@@ -32,7 +26,6 @@ public class MasterRequestDto {
     private String coverImage;
 
     @NotEmpty
-    @PhoneNumber
     private String phoneNumber;
 
     @NotNull
