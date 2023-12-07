@@ -24,7 +24,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 @CrossOrigin(origins = {"http://localhost:3000",
-        "https://mykhailokrlkrk.github.io/s-tet/"},
+        "https://mykhailokrlkrk.github.io/s-tet/",
+        "http://s-tet.byethost12.com/"},
         methods = {
                 RequestMethod.GET,
                 RequestMethod.DELETE,

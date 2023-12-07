@@ -8,8 +8,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class MasterDto {
     private Long id;
-    private String name;
-    private String lastName;
+    private String fullName;
     private Qualification qualification;
     private String coverImage;
 }

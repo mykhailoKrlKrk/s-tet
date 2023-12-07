@@ -10,17 +10,14 @@ databaseChangeLog:
                   name: id
                   value: 1
               - column:
-                  name: name
-                  value: "Olivia"
-              - column:
-                  name: last_name
-                  value: "Doe"
+                  name: full_name
+                  value: "Olivia Doe"
               - column:
                   name: qualification
                   value: "MASTER"
               - column:
                   name: cover_image
-                  value: "image1.jpg"
+                  value: "./img/hair__masters/master-1.jpg"
               - column:
                   name: phone_number
                   value: "(067) 393-3838"
@@ -32,17 +29,14 @@ databaseChangeLog:
                   name: id
                   value: 2
               - column:
-                  name: name
-                  value: "Jane"
-              - column:
-                  name: last_name
-                  value: "Smith"
+                  name: full_name
+                  value: "Jane Smith"
               - column:
                   name: qualification
                   value: "HEADMASTER"
               - column:
                   name: cover_image
-                  value: "image2.jpg"
+                  value: "./img/hair__masters/master-2.jpg"
               - column:
                   name: phone_number
                   value: "(096) 654-3210"
@@ -54,17 +48,14 @@ databaseChangeLog:
                   name: id
                   value: 3
               - column:
-                  name: name
-                  value: "Emily"
-              - column:
-                  name: last_name
-                  value: "Johnson"
+                  name: full_name
+                  value: "Emily Johnson"
               - column:
                   name: qualification
                   value: "MASTER"
               - column:
                   name: cover_image
-                  value: "image2.jpg"
+                  value: "./img/hair__masters/master-3.jpg"
               - column:
                   name: phone_number
                   value: "(096) 654-3210"
@@ -76,17 +67,14 @@ databaseChangeLog:
                   name: id
                   value: 4
               - column:
-                  name: name
-                  value: "Eva"
-              - column:
-                  name: last_name
-                  value: "Williams"
+                  name: full_name
+                  value: "Eva Williams"
               - column:
                   name: qualification
                   value: "HEADMASTER"
               - column:
                   name: cover_image
-                  value: "image2.jpg"
+                  value: "./img/hair__masters/master-4.jpg"
               - column:
                   name: phone_number
                   value: "(096) 633-3210"
@@ -98,17 +86,14 @@ databaseChangeLog:
                   name: id
                   value: 5
               - column:
-                  name: name
-                  value: "Ava"
-              - column:
-                  name: last_name
-                  value: "Baker"
+                  name: full_name
+                  value: "Ava Baker"
               - column:
                   name: qualification
                   value: "MASTER"
               - column:
                   name: cover_image
-                  value: "image2.jpg"
+                  value: "./img/hair__masters/master-5.jpg"
               - column:
                   name: phone_number
                   value: "(096) 633-3339"
@@ -120,17 +105,14 @@ databaseChangeLog:
                   name: id
                   value: 6
               - column:
-                  name: name
-                  value: "Robert"
-              - column:
-                  name: last_name
-                  value: "Jones"
+                  name: full_name
+                  value: "Robert Jones"
               - column:
                   name: qualification
                   value: "HEADMASTER"
               - column:
                   name: cover_image
-                  value: "image2.jpg"
+                  value: "./img/men__masters/master-1.jpg"
               - column:
                   name: phone_number
                   value: "(096) 633-3330"
@@ -142,17 +124,14 @@ databaseChangeLog:
                   name: id
                   value: 7
               - column:
-                  name: name
-                  value: "William"
-              - column:
-                  name: last_name
-                  value: "Clark"
+                  name: full_name
+                  value: "William Clark"
               - column:
                   name: qualification
                   value: "MASTER"
               - column:
                   name: cover_image
-                  value: "image2.jpg"
+                  value: "./img/men__masters/master-2.jpg"
               - column:
                   name: phone_number
                   value: "(096) 633-3330"
@@ -164,17 +143,14 @@ databaseChangeLog:
                   name: id
                   value: 8
               - column:
-                  name: name
-                  value: "Daniel"
-              - column:
-                  name: last_name
-                  value: "Hall"
+                  name: full_name
+                  value: "Daniel Hall"
               - column:
                   name: qualification
                   value: "MASTER"
               - column:
                   name: cover_image
-                  value: "image2.jpg"
+                  value: "./img/men__masters/master-3.jpg"
               - column:
                   name: phone_number
                   value: "(096) 633-3330"
@@ -186,17 +162,14 @@ databaseChangeLog:
                   name: id
                   value: 9
               - column:
-                  name: name
-                  value: "Hanna"
-              - column:
-                  name: last_name
-                  value: "Taylor"
+                  name: full_name
+                  value: "Hanna Taylor"
               - column:
                   name: qualification
                   value: "HEADMASTER"
               - column:
                   name: cover_image
-                  value: "image2.jpg"
+                  value: "./img/nails__masters/master-1.jpg"
               - column:
                   name: phone_number
                   value: "(096) 633-3330"
@@ -208,17 +181,14 @@ databaseChangeLog:
                   name: id
                   value: 10
               - column:
-                  name: name
-                  value: "Olha"
-              - column:
-                  name: last_name
-                  value: "Martin"
+                  name: full_name
+                  value: "Olha Martin"
               - column:
                   name: qualification
                   value: "HEADMASTER"
               - column:
                   name: cover_image
-                  value: "image2.jpg"
+                  value: "./img/nails__masters/master-2.jpg"
               - column:
                   name: phone_number
                   value: "(096) 633-3339"
@@ -230,17 +200,14 @@ databaseChangeLog:
                   name: id
                   value: 11
               - column:
-                  name: name
-                  value: "Ava"
-              - column:
-                  name: last_name
-                  value: "Martin"
+                  name: full_name
+                  value: "Ava Martin"
               - column:
                   name: qualification
                   value: "MASTER"
               - column:
                   name: cover_image
-                  value: "image2.jpg"
+                  value: "./img/nails__masters/master-3.jpg"
               - column:
                   name: phone_number
                   value: "(096) 633-3339"
@@ -252,17 +219,14 @@ databaseChangeLog:
                   name: id
                   value: 12
               - column:
-                  name: name
-                  value: "Emily"
-              - column:
-                  name: last_name
-                  value: "Brown"
+                  name: full_name
+                  value: "Emily Brown"
               - column:
                   name: qualification
                   value: "MASTER"
               - column:
                   name: cover_image
-                  value: "image2.jpg"
+                  value: "./img/nails__masters/master-4.jpg"
               - column:
                   name: phone_number
                   value: "(096) 633-3339"
@@ -274,17 +238,14 @@ databaseChangeLog:
                   name: id
                   value: 13
               - column:
-                  name: name
-                  value: "Eva"
-              - column:
-                  name: last_name
-                  value: "Brown"
+                  name: full_name
+                  value: "Eva Brown"
               - column:
                   name: qualification
                   value: "MASTER"
               - column:
                   name: cover_image
-                  value: "image2.jpg"
+                  value: "./img/nails__masters/master-5.jpg"
               - column:
                   name: phone_number
                   value: "(096) 633-3339"
@@ -296,17 +257,14 @@ databaseChangeLog:
                   name: id
                   value: 14
               - column:
-                  name: name
-                  value: "Sophia"
-              - column:
-                  name: last_name
-                  value: "Miller"
+                  name: full_name
+                  value: "Sophia Miller"
               - column:
                   name: qualification
                   value: "MASTER"
               - column:
                   name: cover_image
-                  value: "image2.jpg"
+                  value: "./img/makeup__masters/master-1.jpg"
               - column:
                   name: phone_number
                   value: "(096) 633-3339"
@@ -318,17 +276,14 @@ databaseChangeLog:
                   name: id
                   value: 15
               - column:
-                  name: name
-                  value: "Emily"
-              - column:
-                  name: last_name
-                  value: "Miller"
+                  name: full_name
+                  value: "Emily Miller"
               - column:
                   name: qualification
                   value: "HEADMASTER"
               - column:
                   name: cover_image
-                  value: "image2.jpg"
+                  value: "./img/makeup__masters/master-2.jpg"
               - column:
                   name: phone_number
                   value: "(096) 633-3339"
@@ -340,17 +295,14 @@ databaseChangeLog:
                   name: id
                   value: 16
               - column:
-                  name: name
-                  value: "Eva"
-              - column:
-                  name: last_name
-                  value: "Baker"
+                  name: full_name
+                  value: "Eva Baker"
               - column:
                   name: qualification
                   value: "HEADMASTER"
               - column:
                   name: cover_image
-                  value: "image2.jpg"
+                  value: "./img/makeup__masters/master-3.jpg"
               - column:
                   name: phone_number
                   value: "(096) 633-3339"
@@ -362,17 +314,14 @@ databaseChangeLog:
                   name: id
                   value: 17
               - column:
-                  name: name
-                  value: "Olivia"
-              - column:
-                  name: last_name
-                  value: "Baker"
+                  name: full_name
+                  value: "Olivia Baker"
               - column:
                   name: qualification
                   value: "MASTER"
               - column:
                   name: cover_image
-                  value: "image2.jpg"
+                  value: "./img/makeup__masters/master-4.jpg"
               - column:
                   name: phone_number
                   value: "(096) 633-3339"
