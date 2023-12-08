@@ -43,8 +43,8 @@ public class OrderController {
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Create order", description = "Create new order in the DB")
     public OrderResponseDto createOrder(@RequestBody @Valid OrderRequestDto requestDto) {
-        logger.info("method createOrder is called with params: name - "
-                + requestDto.getClientName() + ",services - " + requestDto.getServicesId()
+        logger.info("method createOrder is called with params: name - " +
+                requestDto.getClientName() + ",services - " + requestDto.getServicesId()
                 + ", master - " + requestDto.getMasterId());
         return orderService.createOrder(requestDto);
     }
