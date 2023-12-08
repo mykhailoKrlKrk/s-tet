@@ -8,6 +8,8 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -25,7 +27,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 @CrossOrigin(origins = {"http://localhost:3000",
-        "https://mykhailokrlkrk.github.io/s-tet/",
         "http://s-tet.byethost12.com/"},
         methods = {
                 RequestMethod.GET,
@@ -35,12 +36,16 @@ import org.springframework.web.bind.annotation.RestController;
         })
 @RequestMapping(value = "/orders")
 public class OrderController {
+    private static final Logger logger = LogManager.getLogger(OrderController.class);
     private final OrderService orderService;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Create order", description = "Create new order in the DB")
     public OrderResponseDto createOrder(@RequestBody @Valid OrderRequestDto requestDto) {
+        logger.info("method createOrder is called with params: name - "
+                + requestDto.getClientName() + ",services - " + requestDto.getServicesId()
+                + ", master - " + requestDto.getMasterId());
         return orderService.createOrder(requestDto);
     }
 
@@ -56,6 +61,7 @@ public class OrderController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @Operation(summary = "Delete order", description = "Delete order by specific id")
     public void delete(@PathVariable Long id) {
+        logger.info("method delete order is called with id: " + id);
         orderService.delete(id);
     }
 

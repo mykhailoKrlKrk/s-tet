@@ -8,6 +8,8 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -25,7 +27,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 @CrossOrigin(origins = {"http://localhost:3000",
-        "https://mykhailokrlkrk.github.io/s-tet/",
         "http://s-tet.byethost12.com/"},
         methods = {
                 RequestMethod.GET,
@@ -35,12 +36,14 @@ import org.springframework.web.bind.annotation.RestController;
         })
 @RequestMapping(value = "/subservices")
 public class SubServiceController {
+    private static final Logger logger = LogManager.getLogger(SubServiceController.class);
     private final ServicesService servicesService;
 
     @GetMapping("/{category}")
     @Operation(summary = "Get all subservices by service",
             description = "Get subservices that specific service support")
     public List<ServiceDto> getAllSubServicesByService(@PathVariable String category) {
+        logger.debug("method getAllSubServicesByService is called with category: " + category);
         return servicesService.getServicesByCategory(category);
     }
 
@@ -55,6 +58,8 @@ public class SubServiceController {
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Create subservice", description = "Create new subservice in the DB")
     public ServiceDto createSubService(@RequestBody @Valid ServiceRequestDto requestDto) {
+        logger.info("method createSubService is called with params: name - "
+                + requestDto.getName() + ", serviceId - " + requestDto.getCategoryId());
         return servicesService.save(requestDto);
     }
 
@@ -62,6 +67,7 @@ public class SubServiceController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @Operation(summary = "Delete subservice", description = "Delete subservice by specific id")
     public void delete(@PathVariable Long id) {
+        logger.info("method delete subService is called with id: " + id);
         servicesService.deleteById(id);
     }
 }
