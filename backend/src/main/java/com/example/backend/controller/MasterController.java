@@ -8,6 +8,8 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -25,7 +27,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 @CrossOrigin(origins = {"http://localhost:3000",
-        "https://mykhailokrlkrk.github.io/s-tet/",
         "http://s-tet.byethost12.com/"},
         methods = {
                 RequestMethod.GET,
@@ -36,6 +37,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/masters")
 public class MasterController {
 
+    public static final Logger logger = LogManager.getLogger(MasterController.class);
     private final MasterService masterService;
 
     @GetMapping
@@ -50,6 +52,7 @@ public class MasterController {
     @Operation(summary = "Get masters by category",
             description = "Get list of masters by category")
     public List<MasterDto> getMastersByCategory(@PathVariable String category) {
+        logger.debug("method getMastersByCategory is called with category: " + category);
         return masterService.getMastersByCategory(category);
     }
 
@@ -57,6 +60,9 @@ public class MasterController {
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Create master", description = "Create new master in the DB")
     public MasterDto createMaster(@RequestBody @Valid MasterRequestDto requestDto) {
+        logger.info("method createMaster is called with params: name - "
+                + requestDto.getFullName(), ",serviceId - "
+                + requestDto.getServiceId());
         return masterService.createMaster(requestDto);
     }
 
@@ -64,6 +70,7 @@ public class MasterController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @Operation(summary = "Delete master", description = "Delete master by specific id")
     public void delete(@PathVariable Long id) {
+        logger.info("method delete master is called with id: " + id);
         masterService.delete(id);
     }
 }
