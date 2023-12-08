@@ -36,7 +36,7 @@ import org.springframework.web.bind.annotation.RestController;
         })
 @RequestMapping(value = "/services")
 public class ServiceController {
-    public static final Logger logger = LogManager.getLogger(ServiceController.class);
+    private static final Logger logger = LogManager.getLogger(ServiceController.class);
     private final CategoryService categoryService;
 
     @PostMapping

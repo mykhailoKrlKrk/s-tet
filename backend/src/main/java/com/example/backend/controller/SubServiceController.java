@@ -36,8 +36,7 @@ import org.springframework.web.bind.annotation.RestController;
         })
 @RequestMapping(value = "/subservices")
 public class SubServiceController {
-
-    public static final Logger logger = LogManager.getLogger(SubServiceController.class);
+    private static final Logger logger = LogManager.getLogger(SubServiceController.class);
     private final ServicesService servicesService;
 
     @GetMapping("/{category}")

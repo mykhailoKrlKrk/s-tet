@@ -37,7 +37,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/masters")
 public class MasterController {
 
-    public static final Logger logger = LogManager.getLogger(MasterController.class);
+    private static final Logger logger = LogManager.getLogger(MasterController.class);
     private final MasterService masterService;
 
     @GetMapping

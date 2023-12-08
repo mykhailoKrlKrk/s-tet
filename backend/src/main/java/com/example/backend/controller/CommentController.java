@@ -35,7 +35,7 @@ import org.springframework.web.bind.annotation.RestController;
         })
 @RequestMapping("/comments")
 public class CommentController {
-    public static final Logger logger = LogManager.getLogger(CommentController.class);
+    private static final Logger logger = LogManager.getLogger(CommentController.class);
     private final CommentService commentService;
 
     @GetMapping
@@ -49,7 +49,7 @@ public class CommentController {
     @Operation(summary = "Get all comments by service",
             description = "Get list of all available comments by service")
     public List<CommentDto> getCommentsByCategory(@PathVariable String category) {
-        logger.debug("method getCommentsByCategory is called with category: " + category);
+        logger.debug("method getCommentsByCategory is called with category:" + category);
         return commentService.getCommentsByCategory(category);
     }
 
