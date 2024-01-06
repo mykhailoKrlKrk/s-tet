@@ -57,7 +57,7 @@ public class ServiceController {
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @Operation(summary = "Delete service", description = "Delete service by specific id")
-    public void info(@PathVariable Long id) {
+    public void delete(@PathVariable Long id) {
         logger.debug("method delete service is called with id: " + id);
         categoryService.deleteById(id);
     }

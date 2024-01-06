@@ -1,0 +1,1 @@
+DELETE FROM masters WHERE id=18;
