@@ -1,146 +1,27 @@
-2023-12-08T10:25:46.742+02:00  INFO 2938 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 19.0.2 with PID 2938 (/Users/mihailokuryk/Documents/Mate-HomeWork/s-tet-new/backend/target/classes started by mihailokuryk in /Users/mihailokuryk/Documents/Mate-HomeWork/s-tet-new)
-2023-12-08T10:25:46.743+02:00  INFO 2938 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-12-08T10:25:47.060+02:00  INFO 2938 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-08T10:25:47.095+02:00  INFO 2938 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 5 JPA repository interfaces.
-2023-12-08T10:25:47.335+02:00  INFO 2938 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-12-08T10:25:47.339+02:00  INFO 2938 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-08T10:25:47.340+02:00  INFO 2938 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2023-12-08T10:25:47.380+02:00  INFO 2938 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2023-12-08T10:25:47.380+02:00  INFO 2938 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 619 ms
-2023-12-08T10:25:47.389+02:00 DEBUG 2938 --- [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-2023-12-08T10:25:47.389+02:00 DEBUG 2938 --- [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
-2023-12-08T10:25:47.438+02:00  INFO 2938 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-12-08T10:25:47.579+02:00  INFO 2938 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e95973c
-2023-12-08T10:25:47.580+02:00  INFO 2938 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-12-08T10:25:48.467+02:00  INFO 2938 --- [main] liquibase.changelog                      : Reading from `s-tet`.DATABASECHANGELOG
-2023-12-08T10:25:48.559+02:00  INFO 2938 --- [main] liquibase.changelog                      : Reading from `s-tet`.DATABASECHANGELOG
-2023-12-08T10:25:48.568+02:00  INFO 2938 --- [main] liquibase.util                           : UPDATE SUMMARY
-2023-12-08T10:25:48.568+02:00  INFO 2938 --- [main] liquibase.util                           : Run:                          0
-2023-12-08T10:25:48.568+02:00  INFO 2938 --- [main] liquibase.util                           : Previously run:              14
-2023-12-08T10:25:48.569+02:00  INFO 2938 --- [main] liquibase.util                           : Filtered out:                 0
-2023-12-08T10:25:48.569+02:00  INFO 2938 --- [main] liquibase.util                           : -------------------------------
-2023-12-08T10:25:48.569+02:00  INFO 2938 --- [main] liquibase.util                           : Total change sets:           14
-
-2023-12-08T10:25:48.569+02:00  INFO 2938 --- [main] liquibase.util                           : Update summary generated
-2023-12-08T10:25:48.577+02:00  INFO 2938 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2023-12-08T10:25:48.577+02:00  INFO 2938 --- [main] liquibase.command                        : Command execution complete
-2023-12-08T10:25:48.607+02:00  INFO 2938 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-08T10:25:48.631+02:00  INFO 2938 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
-2023-12-08T10:25:48.632+02:00  INFO 2938 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-12-08T10:25:48.743+02:00  INFO 2938 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-08T10:25:49.184+02:00  INFO 2938 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-08T10:25:49.204+02:00  INFO 2938 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-08T10:25:49.312+02:00  INFO 2938 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2023-12-08T10:25:49.575+02:00  WARN 2938 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-08T10:25:49.620+02:00 DEBUG 2938 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2023-12-08T10:25:49.660+02:00 DEBUG 2938 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 24 mappings in 'requestMappingHandlerMapping'
-2023-12-08T10:25:49.669+02:00 DEBUG 2938 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2023-12-08T10:25:49.673+02:00 DEBUG 2938 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2023-12-08T10:25:49.687+02:00  WARN 2938 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2023-12-08T10:25:49.758+02:00  INFO 2938 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api'
-2023-12-08T10:25:49.764+02:00  INFO 2938 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 3.189 seconds (process running for 3.435)
-2023-12-08T10:26:03.166+02:00  INFO 2938 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-08T10:26:03.167+02:00  INFO 2938 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-08T10:26:03.167+02:00 DEBUG 2938 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2023-12-08T10:26:03.167+02:00 DEBUG 2938 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2023-12-08T10:26:03.167+02:00 DEBUG 2938 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2023-12-08T10:26:03.170+02:00 DEBUG 2938 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@10fef2d7
-2023-12-08T10:26:03.171+02:00 DEBUG 2938 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@24b23fbd
-2023-12-08T10:26:03.171+02:00 DEBUG 2938 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2023-12-08T10:26:03.171+02:00  INFO 2938 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2023-12-08T10:26:03.176+02:00 DEBUG 2938 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/comments/hair", parameters={}
-2023-12-08T10:26:03.184+02:00 DEBUG 2938 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.backend.controller.CommentController#createComment(CommentRequestDto, String)
-2023-12-08T10:26:03.228+02:00 DEBUG 2938 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CommentRequestDto(fullName=string, description=string)]
-2023-12-08T10:26:03.246+02:00  INFO 2938 --- [http-nio-8080-exec-1] c.e.b.controller.CommentController       : method createComment is called for category: hair
-2023-12-08T10:26:03.339+02:00 DEBUG 2938 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2023-12-08T10:26:03.340+02:00 DEBUG 2938 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [CommentDto(id=45, fullName=string, description=string)]
-2023-12-08T10:26:03.345+02:00 DEBUG 2938 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
-2023-12-08T10:28:44.744+02:00  INFO 2938 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-08T10:28:44.748+02:00  INFO 2938 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-12-08T10:28:44.752+02:00  INFO 2938 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-12-08T10:28:48.751+02:00  INFO 2961 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 19.0.2 with PID 2961 (/Users/mihailokuryk/Documents/Mate-HomeWork/s-tet-new/backend/target/classes started by mihailokuryk in /Users/mihailokuryk/Documents/Mate-HomeWork/s-tet-new)
-2023-12-08T10:28:48.753+02:00  INFO 2961 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-12-08T10:28:49.066+02:00  INFO 2961 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-08T10:28:49.098+02:00  INFO 2961 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 5 JPA repository interfaces.
-2023-12-08T10:28:49.317+02:00  INFO 2961 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-12-08T10:28:49.321+02:00  INFO 2961 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-08T10:28:49.322+02:00  INFO 2961 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2023-12-08T10:28:49.360+02:00  INFO 2961 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2023-12-08T10:28:49.361+02:00  INFO 2961 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 591 ms
-2023-12-08T10:28:49.418+02:00  INFO 2961 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-12-08T10:28:49.562+02:00  INFO 2961 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55a0f011
-2023-12-08T10:28:49.563+02:00  INFO 2961 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-12-08T10:28:50.422+02:00  INFO 2961 --- [main] liquibase.changelog                      : Reading from `s-tet`.DATABASECHANGELOG
-2023-12-08T10:28:50.515+02:00  INFO 2961 --- [main] liquibase.changelog                      : Reading from `s-tet`.DATABASECHANGELOG
-2023-12-08T10:28:50.524+02:00  INFO 2961 --- [main] liquibase.util                           : UPDATE SUMMARY
-2023-12-08T10:28:50.524+02:00  INFO 2961 --- [main] liquibase.util                           : Run:                          0
-2023-12-08T10:28:50.524+02:00  INFO 2961 --- [main] liquibase.util                           : Previously run:              14
-2023-12-08T10:28:50.524+02:00  INFO 2961 --- [main] liquibase.util                           : Filtered out:                 0
-2023-12-08T10:28:50.524+02:00  INFO 2961 --- [main] liquibase.util                           : -------------------------------
-2023-12-08T10:28:50.524+02:00  INFO 2961 --- [main] liquibase.util                           : Total change sets:           14
-
-2023-12-08T10:28:50.524+02:00  INFO 2961 --- [main] liquibase.util                           : Update summary generated
-2023-12-08T10:28:50.534+02:00  INFO 2961 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2023-12-08T10:28:50.534+02:00  INFO 2961 --- [main] liquibase.command                        : Command execution complete
-2023-12-08T10:28:50.564+02:00  INFO 2961 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-08T10:28:50.589+02:00  INFO 2961 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
-2023-12-08T10:28:50.590+02:00  INFO 2961 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-12-08T10:28:50.698+02:00  INFO 2961 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-08T10:28:51.150+02:00  INFO 2961 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-08T10:28:51.170+02:00  INFO 2961 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-08T10:28:51.276+02:00  INFO 2961 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2023-12-08T10:28:51.539+02:00  WARN 2961 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-08T10:28:51.650+02:00  WARN 2961 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2023-12-08T10:28:51.716+02:00  INFO 2961 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api'
-2023-12-08T10:28:51.721+02:00  INFO 2961 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 3.154 seconds (process running for 3.409)
-2023-12-08T10:28:58.204+02:00  INFO 2961 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-08T10:28:58.204+02:00  INFO 2961 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-08T10:28:58.207+02:00  INFO 2961 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2023-12-08T10:28:58.305+02:00  INFO 2961 --- [http-nio-8080-exec-1] c.e.b.controller.CommentController       : method createComment is called for category: hair
-2023-12-08T10:28:58.347+02:00 DEBUG 2961 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.is_deleted,c1_0.name from categories c1_0 where (c1_0.is_deleted=0) and c1_0.name=?
-2023-12-08T10:28:58.372+02:00 DEBUG 2961 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : insert into comments (category_id,description,full_name,is_deleted) values (?,?,?,?)
-2023-12-08T10:30:37.132+02:00  INFO 2961 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-08T10:30:37.136+02:00  INFO 2961 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-12-08T10:30:37.141+02:00  INFO 2961 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-12-08T10:30:40.551+02:00  INFO 2988 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 19.0.2 with PID 2988 (/Users/mihailokuryk/Documents/Mate-HomeWork/s-tet-new/backend/target/classes started by mihailokuryk in /Users/mihailokuryk/Documents/Mate-HomeWork/s-tet-new)
-2023-12-08T10:30:40.552+02:00  INFO 2988 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-12-08T10:30:40.859+02:00  INFO 2988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-08T10:30:40.891+02:00  INFO 2988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 5 JPA repository interfaces.
-2023-12-08T10:30:41.108+02:00  INFO 2988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-12-08T10:30:41.112+02:00  INFO 2988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-08T10:30:41.112+02:00  INFO 2988 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2023-12-08T10:30:41.149+02:00  INFO 2988 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2023-12-08T10:30:41.150+02:00  INFO 2988 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 580 ms
-2023-12-08T10:30:41.208+02:00  INFO 2988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-12-08T10:30:41.344+02:00  INFO 2988 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c9fdb64
-2023-12-08T10:30:41.345+02:00  INFO 2988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-12-08T10:30:42.195+02:00  INFO 2988 --- [main] liquibase.changelog                      : Reading from `s-tet`.DATABASECHANGELOG
-2023-12-08T10:30:42.287+02:00  INFO 2988 --- [main] liquibase.changelog                      : Reading from `s-tet`.DATABASECHANGELOG
-2023-12-08T10:30:42.296+02:00  INFO 2988 --- [main] liquibase.util                           : UPDATE SUMMARY
-2023-12-08T10:30:42.296+02:00  INFO 2988 --- [main] liquibase.util                           : Run:                          0
-2023-12-08T10:30:42.296+02:00  INFO 2988 --- [main] liquibase.util                           : Previously run:              14
-2023-12-08T10:30:42.296+02:00  INFO 2988 --- [main] liquibase.util                           : Filtered out:                 0
-2023-12-08T10:30:42.296+02:00  INFO 2988 --- [main] liquibase.util                           : -------------------------------
-2023-12-08T10:30:42.296+02:00  INFO 2988 --- [main] liquibase.util                           : Total change sets:           14
-
-2023-12-08T10:30:42.296+02:00  INFO 2988 --- [main] liquibase.util                           : Update summary generated
-2023-12-08T10:30:42.304+02:00  INFO 2988 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2023-12-08T10:30:42.304+02:00  INFO 2988 --- [main] liquibase.command                        : Command execution complete
-2023-12-08T10:30:42.333+02:00  INFO 2988 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-08T10:30:42.356+02:00  INFO 2988 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
-2023-12-08T10:30:42.357+02:00  INFO 2988 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-12-08T10:30:42.470+02:00  INFO 2988 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-08T10:30:42.907+02:00  INFO 2988 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-08T10:30:42.925+02:00  INFO 2988 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-08T10:30:43.033+02:00  INFO 2988 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2023-12-08T10:30:43.296+02:00  WARN 2988 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-08T10:30:43.409+02:00  WARN 2988 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2023-12-08T10:30:43.477+02:00  INFO 2988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api'
-2023-12-08T10:30:43.482+02:00  INFO 2988 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 3.121 seconds (process running for 3.389)
-2023-12-08T10:30:50.972+02:00  INFO 2988 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-08T10:30:50.972+02:00  INFO 2988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-08T10:30:50.976+02:00  INFO 2988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2023-12-08T10:30:51.065+02:00  INFO 2988 --- [http-nio-8080-exec-1] c.e.b.controller.CommentController       : method createComment is called for category: hair
-2023-12-08T10:32:57.722+02:00  INFO 2988 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-08T10:32:57.727+02:00  INFO 2988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-12-08T10:32:57.743+02:00  INFO 2988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T17:42:39.389+02:00  INFO 16549 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 19.0.2 with PID 16549 (/Users/mihailokuryk/Documents/Mate-HomeWork/s-tet-new/backend/target/classes started by mihailokuryk in /Users/mihailokuryk/Documents/Mate-HomeWork/s-tet-new)
+2024-01-05T17:42:39.392+02:00  INFO 16549 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T17:42:39.771+02:00  INFO 16549 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T17:42:39.809+02:00  INFO 16549 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 5 JPA repository interfaces.
+2024-01-05T17:42:40.058+02:00  INFO 16549 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-05T17:42:40.064+02:00  INFO 16549 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-05T17:42:40.064+02:00  INFO 16549 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-05T17:42:40.117+02:00  INFO 16549 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2024-01-05T17:42:40.117+02:00  INFO 16549 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 706 ms
+2024-01-05T17:42:40.183+02:00  INFO 16549 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T17:42:40.360+02:00  INFO 16549 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30b3d899
+2024-01-05T17:42:40.361+02:00  INFO 16549 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T17:42:41.272+02:00  INFO 16549 --- [main] liquibase.changelog                      : Reading from `s-tet`.DATABASECHANGELOG
+2024-01-05T17:42:41.456+02:00  INFO 16549 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-05T17:42:41.486+02:00  INFO 16549 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-01-05T17:42:41.487+02:00  INFO 16549 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-05T17:42:41.640+02:00  INFO 16549 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T17:42:42.137+02:00  INFO 16549 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-05T17:42:42.164+02:00  INFO 16549 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T17:42:42.285+02:00  INFO 16549 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-01-05T17:42:42.599+02:00  WARN 16549 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T17:42:42.722+02:00  WARN 16549 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-01-05T17:42:42.795+02:00  INFO 16549 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api'
+2024-01-05T17:42:42.800+02:00  INFO 16549 --- [main] com.example.backend.BackendApplication   : Started BackendApplication in 3.594 seconds (process running for 3.975)
+2024-01-05T17:42:42.806+02:00  INFO 16549 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T17:42:42.808+02:00  INFO 16549 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T17:42:42.811+02:00  INFO 16549 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

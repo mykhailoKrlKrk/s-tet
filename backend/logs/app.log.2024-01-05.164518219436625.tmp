@@ -1,0 +1,55 @@
+2024-01-05T16:07:23.175+02:00  INFO 13072 --- [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 19.0.2 with PID 13072 (/Users/mihailokuryk/Documents/Mate-HomeWork/s-tet-new/backend/target/classes started by mihailokuryk in /Users/mihailokuryk/Documents/Mate-HomeWork/s-tet-new)
+2024-01-05T16:07:23.190+02:00  INFO 13072 --- [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-05T16:07:23.705+02:00  INFO 13072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-05T16:07:23.758+02:00  INFO 13072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 5 JPA repository interfaces.
+2024-01-05T16:07:24.081+02:00  INFO 13072 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-01-05T16:07:24.087+02:00  INFO 13072 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-05T16:07:24.087+02:00  INFO 13072 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-01-05T16:07:24.124+02:00  INFO 13072 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2024-01-05T16:07:24.124+02:00  INFO 13072 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 899 ms
+2024-01-05T16:07:24.187+02:00  INFO 13072 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-05T16:07:24.396+02:00  INFO 13072 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@289f15e9
+2024-01-05T16:07:24.397+02:00  INFO 13072 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-05T16:07:25.450+02:00  INFO 13072 --- [main] liquibase.changelog                      : Reading from `s-tet`.DATABASECHANGELOG
+2024-01-05T16:07:25.557+02:00  INFO 13072 --- [main] liquibase.changelog                      : Reading from `s-tet`.DATABASECHANGELOG
+2024-01-05T16:07:25.567+02:00  INFO 13072 --- [main] liquibase.util                           : UPDATE SUMMARY
+2024-01-05T16:07:25.567+02:00  INFO 13072 --- [main] liquibase.util                           : Run:                          0
+2024-01-05T16:07:25.567+02:00  INFO 13072 --- [main] liquibase.util                           : Previously run:              14
+2024-01-05T16:07:25.567+02:00  INFO 13072 --- [main] liquibase.util                           : Filtered out:                 0
+2024-01-05T16:07:25.567+02:00  INFO 13072 --- [main] liquibase.util                           : -------------------------------
+2024-01-05T16:07:25.567+02:00  INFO 13072 --- [main] liquibase.util                           : Total change sets:           14
+
+2024-01-05T16:07:25.567+02:00  INFO 13072 --- [main] liquibase.util                           : Update summary generated
+2024-01-05T16:07:25.585+02:00  INFO 13072 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2024-01-05T16:07:25.585+02:00  INFO 13072 --- [main] liquibase.command                        : Command execution complete
+2024-01-05T16:07:25.623+02:00  INFO 13072 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-05T16:07:25.649+02:00  INFO 13072 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-01-05T16:07:25.650+02:00  INFO 13072 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-01-05T16:07:25.807+02:00  INFO 13072 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-05T16:07:26.375+02:00  INFO 13072 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-05T16:07:26.393+02:00  INFO 13072 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T16:07:26.518+02:00  INFO 13072 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-01-05T16:07:26.839+02:00  WARN 13072 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-05T16:07:26.977+02:00  WARN 13072 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-01-05T16:07:27.054+02:00  WARN 13072 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-01-05T16:07:27.055+02:00  INFO 13072 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-05T16:07:27.057+02:00  INFO 13072 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-05T16:07:27.061+02:00  INFO 13072 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-01-05T16:07:27.062+02:00  INFO 13072 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-01-05T16:07:27.070+02:00  INFO 13072 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-01-05T16:07:27.079+02:00 ERROR 13072 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+

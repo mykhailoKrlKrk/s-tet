@@ -1,0 +1,1 @@
+DELETE FROM categories where id=6;

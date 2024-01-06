@@ -39,9 +39,14 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public List<CommentDto> getCommentsByCategory(String category) {
-        return commentRepository.getCommentsByCategory(category).stream()
+        List<CommentDto> comments = commentRepository.getCommentsByCategory(category).stream()
                 .map(commentMapper::toDto)
                 .toList();
+        if (comments.isEmpty()) {
+            throw new EntityNotFoundException("Can't find comments by category: " + category);
+        }
+
+        return comments;
     }
 
     @Override

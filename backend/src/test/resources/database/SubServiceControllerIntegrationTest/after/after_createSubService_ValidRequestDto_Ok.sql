@@ -1,0 +1,1 @@
+DELETE FROM services WHERE id=82;
