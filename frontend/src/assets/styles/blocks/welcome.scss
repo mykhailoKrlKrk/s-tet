@@ -1,0 +1,87 @@
+.welcome {
+  height: 700px;
+  display: grid;
+  position: relative;
+
+  &__banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 2s;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__left {
+    width: 25%;
+    left: 0;
+  }
+
+  &__right {
+    width: 30%;
+    right: 0;
+  }
+
+  &__left,
+  &__right {
+    text-align: center;
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    height: 100%;
+    background-color: #f3e8e2a8;
+
+    @media (max-width: 1240px) {
+      width: 35%;
+    }
+
+    @media (max-width: 820px) {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__title {
+    padding-top: 200px;
+    font-family: 'Lily Script One';
+    font-size: 120px;
+    text-shadow: 2px 2px 4px #534949;
+    margin-bottom: 50px;
+    
+    &--toCapitalize {
+      text-transform: capitalize;
+    }
+
+    @media (max-width: 940px) {
+      font-size: 86px;
+    }
+
+    @media (max-width: 820px) {
+      font-size: 120px;
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: LilyScriptOne;
+    font-size: 24px;
+    text-align: center;
+    line-height: 130%;
+    letter-spacing: 1.5px;
+    margin-bottom: 70px;
+
+    @media (max-width: 940px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 820px) {
+      font-size: 24px;
+    }
+  }
+}

@@ -3,7 +3,6 @@ package com.example.backend.dto.comment;
 import com.example.backend.validation.Formatter;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
-import lombok.Builder;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import org.hibernate.validator.constraints.Length;
