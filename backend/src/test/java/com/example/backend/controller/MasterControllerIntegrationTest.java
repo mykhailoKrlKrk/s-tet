@@ -1,5 +1,11 @@
 package com.example.backend.controller;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 import com.example.backend.dto.comment.CommentDto;
 import com.example.backend.dto.master.MasterDto;
 import com.example.backend.dto.master.MasterRequestDto;
@@ -19,12 +25,6 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class MasterControllerIntegrationTest {
@@ -52,7 +52,7 @@ public class MasterControllerIntegrationTest {
                 .andReturn();
         List<MasterDto> actual = objectMapper.readValue(result
                 .getResponse().getContentAsString(), new TypeReference<>() {
-        });
+                });
         //Then
         assertNotNull(actual);
         assertEquals(17, actual.size());
@@ -78,9 +78,8 @@ public class MasterControllerIntegrationTest {
 
         //Then
         assertNotNull(actual);
-        assertEquals(5 , actual.size());
+        assertEquals(5, actual.size());
     }
-
 
     @Test
     @DisplayName("Find masters by not existing in category - expected result: "
@@ -95,8 +94,8 @@ public class MasterControllerIntegrationTest {
 
     @Test
     @Sql(scripts = {
-            "classpath:database/MasterControllerIntegrationTest/after/" +
-                    "after_createComment_ValidRequestDto_Ok.sql",
+            "classpath:database/MasterControllerIntegrationTest/after/"
+                    + "after_createComment_ValidRequestDto_Ok.sql",
     }, executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
     @DisplayName("Create master - expected result: create master in DB, return created master")
     public void createComment_ValidRequestDto_Ok() throws Exception {
@@ -121,8 +120,8 @@ public class MasterControllerIntegrationTest {
     }
 
     @Test
-    @DisplayName("Create master with invalid FullName and Description" +
-            " expected result: return exception")
+    @DisplayName("Create master with invalid FullName and Description"
+            + " expected result: return exception")
     public void createMaster_InValidRequestDto_NotOk() throws Exception {
         //Given
         MasterRequestDto requestDto = createDefaultMaster();
@@ -139,8 +138,8 @@ public class MasterControllerIntegrationTest {
 
     @Test
     @Sql(scripts = {
-            "classpath:database/MasterControllerIntegrationTest/before/" +
-                    "before_deleteMaster_Ok.sql",
+            "classpath:database/MasterControllerIntegrationTest/before/"
+                    + "before_deleteMaster_Ok.sql",
     }, executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
     @DisplayName("Delete master by id - expected result: delete master from DB")
     public void deleteMaster_Ok() throws Exception {

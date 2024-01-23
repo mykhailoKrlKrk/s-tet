@@ -1,5 +1,11 @@
 package com.example.backend.controller;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 import com.example.backend.dto.comment.CommentDto;
 import com.example.backend.dto.comment.CommentRequestDto;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -17,12 +23,6 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class CommentControllerIntegrationTest {
@@ -50,7 +50,7 @@ public class CommentControllerIntegrationTest {
                 .andReturn();
         List<CommentDto> actual = objectMapper.readValue(result
                 .getResponse().getContentAsString(), new TypeReference<>() {
-        });
+                });
         //Then
         assertNotNull(actual);
         assertEquals(12, actual.size());
@@ -79,7 +79,6 @@ public class CommentControllerIntegrationTest {
         assertEquals(3, actual.size());
     }
 
-
     @Test
     @DisplayName("Find comments by not existing in category - expected result: "
             + "return exception - NOT FOUND")
@@ -93,8 +92,8 @@ public class CommentControllerIntegrationTest {
 
     @Test
     @Sql(scripts = {
-            "classpath:database/CommentControllerIntegrationTest/after/" +
-                    "after_createComment_ValidRequestDto_Ok.sql",
+            "classpath:database/CommentControllerIntegrationTest/after/"
+                    + "after_createComment_ValidRequestDto_Ok.sql",
     }, executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
     @DisplayName("Create comment - expected result: create comment in DB, return created comment")
     public void createComment_ValidRequestDto_Ok() throws Exception {
@@ -120,8 +119,8 @@ public class CommentControllerIntegrationTest {
     }
 
     @Test
-    @DisplayName("Create comment with invalid FullName and Description" +
-            " expected result: return exception")
+    @DisplayName("Create comment with invalid FullName and Description"
+            + " expected result: return exception")
     public void createComment_InValidRequestDto_NotOk() throws Exception {
         //Given
         String category = "nails";
@@ -141,8 +140,8 @@ public class CommentControllerIntegrationTest {
 
     @Test
     @Sql(scripts = {
-            "classpath:database/CommentControllerIntegrationTest/before/" +
-                    "before_deleteComment_Ok.sql",
+            "classpath:database/CommentControllerIntegrationTest/before/"
+                    + "before_deleteComment_Ok.sql",
     }, executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
     @DisplayName("Delete comment by id - expected result: delete comment from DB")
     public void deleteComment_Ok() throws Exception {

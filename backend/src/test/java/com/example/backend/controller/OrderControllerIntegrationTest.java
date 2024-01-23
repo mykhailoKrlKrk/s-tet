@@ -1,5 +1,11 @@
 package com.example.backend.controller;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 import com.example.backend.dto.master.MasterDto;
 import com.example.backend.dto.order.OrderRequestDto;
 import com.example.backend.dto.order.OrderResponseDto;
@@ -20,12 +26,6 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class OrderControllerIntegrationTest {
@@ -52,7 +52,7 @@ public class OrderControllerIntegrationTest {
                 .andReturn();
         List<MasterDto> actual = objectMapper.readValue(result
                 .getResponse().getContentAsString(), new TypeReference<>() {
-        });
+                });
         //Then
         assertNotNull(actual);
         assertEquals(0, actual.size());
@@ -60,8 +60,8 @@ public class OrderControllerIntegrationTest {
 
     @Test
     @Sql(scripts = {
-            "classpath:database/OrderControllerIntegrationTest/after/" +
-                    "after_createOrder_ValidRequestDto_Ok.sql",
+            "classpath:database/OrderControllerIntegrationTest/after/"
+                    + "after_createOrder_ValidRequestDto_Ok.sql",
     }, executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
     @DisplayName("Create order - expected result: create order in DB, return created order")
     public void createOrder_ValidRequestDto_Ok() throws Exception {
@@ -80,7 +80,7 @@ public class OrderControllerIntegrationTest {
 
         OrderResponseDto actual = objectMapper.readValue(result.getResponse()
                 .getContentAsString(), OrderResponseDto.class);
-        actual.setOrderDate(LocalDateTime.of(2024,6, 1, 16, 3, 3));
+        actual.setOrderDate(LocalDateTime.of(2024, 6, 1, 16, 3, 3));
 
         //Then
         assertNotNull(actual);
@@ -88,8 +88,8 @@ public class OrderControllerIntegrationTest {
     }
 
     @Test
-    @DisplayName("Create order with invalid FullName and Description" +
-            " expected result: return exception")
+    @DisplayName("Create order with invalid FullName and Description"
+            + " expected result: return exception")
     public void createOrder_InValidRequestDto_NotOk() throws Exception {
         //Given
         OrderRequestDto requestDto = createDefaultOrder();
@@ -107,8 +107,8 @@ public class OrderControllerIntegrationTest {
 
     @Test
     @Sql(scripts = {
-            "classpath:database/OrderControllerIntegrationTest/before /" +
-                    "before_before_deleteOrder_Ok.sql",
+            "classpath:database/OrderControllerIntegrationTest/before /"
+                    + "before_before_deleteOrder_Ok.sql",
     }, executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
     @DisplayName("Delete order by id - expected result: delete order from DB")
     public void deleteOrder_Ok() throws Exception {
@@ -130,7 +130,7 @@ public class OrderControllerIntegrationTest {
         return new OrderResponseDto()
                 .setId(2L)
                 .setClientName(requestDto.getClientName())
-                .setOrderDate(LocalDateTime.of(2024,6, 1, 16, 3, 3))
+                .setOrderDate(LocalDateTime.of(2024, 6, 1, 16, 3, 3))
                 .setOrderTotal(requestDto.getOrderTotal())
                 .setComment(requestDto.getComment());
 
